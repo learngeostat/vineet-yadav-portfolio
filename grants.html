@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programs & Projects — Vineet Yadav</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta name="description" content="Portfolio of funded programs and projects spanning NASA, NIST, NSF, DOE and academia. Roles include PI, sub-contract PI/lead, and Co-I.">
+  <style>
+    /* Page-specific polish to mirror Publications */
+    .filters .btn { border-radius: 10rem; }
+    .list-group-item { border: 0; border-bottom: 1px solid rgba(0,0,0,.075); }
+    .list-group-item:last-child { border-bottom: 0; }
+    .item-title { font-weight: 600; }
+    .item-meta { min-width: 210px; text-align: right; color: #6c757d; }
+    @media (max-width: 768px) { .item-meta { text-align: left; margin-top: .25rem; } }
+    .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.2rem .55rem; border-radius:1rem; font-size:.75rem; border:1px solid rgba(0,0,0,.12); }
+    .chip-budget { background:#fff3cd; border-color:#ffe69c; color:#6c4f00; }
+    .chip-role    { background:#e7f1ff; border-color:#cfe2ff; color:#084298; }
+    .chip-status  { background:#eaf7ea; border-color:#cfe9cf; color:#0a7a0a; }
+    .chip-status.completed { background:#f1f3f5; border-color:#dee2e6; color:#495057; }
+    .chip-theme   { background:#f8f9fa; }
+    .section-hdr  { display:flex; align-items:center; gap:.5rem; color:#0d6efd; }
+  </style>
+</head>
+<body>
+  <!-- top accent + shared navbar -->
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects.html">Apps &amp; Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="/publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <h1 class="section-title">Programs &amp; Projects</h1>
+    <p class="text-muted mb-4">
+      Organized like your Publications page for fast scanning: search, quick filters, and sectioned lists. Budgets shown where provided.
+    </p>
+
+    <!-- Program Management summary -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <div class="d-flex align-items-start gap-3">
+          <i class="bi bi-briefcase-fill text-primary" style="font-size:1.5rem"></i>
+          <div>
+            <h5 class="mb-1">Program Management</h5>
+            <div class="text-muted small mb-2">
+              PI • Sub-contract PI/Lead • Co-I across multi-agency initiatives with delivery of algorithms, ESDRs, dashboards, and operational methods.
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip"><i class="bi bi-people"></i> Cross-agency coordination</span>
+              <span class="chip"><i class="bi bi-clipboard-data"></i> Deliverables: Algorithms / ESDRs / Dashboards</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> Documented budgets ≈ $10.8M</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search + quick filters -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-2">
+      <div class="input-group" style="max-width:520px">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input id="q" type="search" class="form-control" placeholder="Search title, agency, theme, role…">
+      </div>
+      <div class="filters d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-primary btn-sm filter" data-filter="all">All</button>
+        <button class="btn btn-outline-primary btn-sm filter" data-filter="ongoing">Ongoing</button>
+        <button class="btn btn-outline-primary btn-sm filter" data-filter="completed">Completed</button>
+        <button class="btn btn-outline-primary btn-sm filter" data-filter="role:PI">PI</button>
+        <button class="btn btn-outline-primary btn-sm filter" data-filter="role:Sub-contract Lead">Sub-contract Lead</button>
+        <button class="btn btn-outline-primary btn-sm filter" data-filter="role:Co-I">Co-I</button>
+        <button class="btn btn-outline-secondary btn-sm" id="clear">Clear</button>
+      </div>
+    </div>
+
+    <!-- ONGOING -->
+    <h5 class="section-hdr mt-4 mb-2"><i class="bi bi-lightning-charge"></i> Ongoing</h5>
+    <div id="ongoing" class="list-group mb-4">
+
+      <div class="list-group-item py-3 item" data-status="ongoing" data-role="PI" data-agency="NASA"
+           data-text="records fused assimilated co2 measures jpl nasa fusion assimilation flux">
+        <div class="d-flex flex-column flex-md-row align-items-md-start">
+          <div class="flex-grow-1">
+            <div class="item-title">
+              Records of Fused &amp; Assimilated CO₂ Observations &amp; Fluxes
+              <a class="ms-1 small link-secondary" href="https://climatesciences.jpl.nasa.gov/co2measures/" target="_blank" rel="noopener" title="Project page">
+                <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+            </div>
+            <div class="small text-muted mb-2">MEaSUREs program creating long, consistent fused XCO₂ and analysis-ready flux records with rigorous uncertainty treatment.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: PI</span>
+              <span class="chip chip-theme"><i class="bi bi-diagram-3"></i> Data fusion / assimilation</span>
+              <span class="chip chip-status"><i class="bi bi-check-circle"></i> Ongoing</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> ~ $3.7M</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA MEaSUREs</div>
+            <div>2018—Present</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="ongoing" data-role="Sub-contract Lead" data-agency="NIST"
+           data-text="la megacities urban ghg observing jpl nist">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">LA Megacities</div>
+            <div class="small text-muted mb-2">Urban greenhouse-gas observing system integrating satellites, in-situ networks, and inversions; JPL sub-contract lead.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Sub-contract Lead</span>
+              <span class="chip chip-theme"><i class="bi bi-buildings"></i> Urban GHG systems</span>
+              <span class="chip chip-status"><i class="bi bi-check-circle"></i> Ongoing</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NIST</div>
+            <div>2015—Present</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="ongoing" data-role="Co-I" data-agency="NASA"
+           data-text="above synthesis reconciliation arctic boreal flux">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">ABoVE Flux Synthesis</div>
+            <div class="small text-muted mb-2">Reconciles greenhouse-gas flux estimates over the Arctic–Boreal domain by combining process models, observations, and atmospheric constraints.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-tree"></i> Arctic–Boreal carbon</span>
+              <span class="chip chip-status"><i class="bi bi-check-circle"></i> Ongoing</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2023—Present</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="ongoing" data-role="Co-I" data-agency="NASA"
+           data-text="measures sif gpp multi decadal fluorescence">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Multi-decadal SIF &amp; GPP Records</div>
+            <div class="small text-muted mb-2">Long-term spaceborne SIF and derived GPP records supporting biosphere–carbon assessments.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-activity"></i> SIF / GPP records</span>
+              <span class="chip chip-status"><i class="bi bi-check-circle"></i> Ongoing</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> ~ $3.7M</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA MEaSUREs</div>
+            <div>2018—Present</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLETED -->
+    <h5 class="section-hdr mt-4 mb-2"><i class="bi bi-flag"></i> Completed</h5>
+    <div id="completed" class="list-group">
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NASA"
+           data-text="aist methane analytic framework multi scale">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Multi-scale Methane Analytic Framework (AIST)</div>
+            <div class="small text-muted mb-2">Methods and tooling for methane detection and attribution across platforms with emphasis on operational analytics.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-clipboard-data"></i> Methane analytics</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2019—2021</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NASA"
+           data-text="cms 2019 carbon monitoring system">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Carbon Monitoring System (CMS 2019)</div>
+            <div class="small text-muted mb-2">Multi-tiered CMS activities supporting analysis-ready carbon products and workflows.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-boxes"></i> Carbon monitoring</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2020—2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NASA"
+           data-text="fluorescence oco-2 oco-3 clars urban biogenic">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Fluorescence-based Constraints on Urban Biogenic CO₂</div>
+            <div class="small text-muted mb-2">Leveraged SIF (OCO-2/3) and ground spectrometer data (CLARS) to constrain urban biogenic CO₂ flux components.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-sun"></i> SIF / urban carbon</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2018—2020</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="PI" data-agency="NASA"
+           data-text="oco-2 stm megacity emissions global">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">OCO-2 STM — Quantifying Global Megacity CO₂ Emission</div>
+            <div class="small text-muted mb-2">Satellite-informed quantification of global megacity CO₂ emissions; JPL sub-contract PI.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: PI (Sub-contract)</span>
+              <span class="chip chip-theme"><i class="bi bi-buildings"></i> Urban emissions</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> ~ $90k</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2015—2017</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="PI" data-agency="Carnegie Institution"
+           data-text="carnegie intelligent co2 data assimilation">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Intelligent CO₂ Data Assimilation System</div>
+            <div class="small text-muted mb-2">Sub-contract PI; algorithmic assimilation system development.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: PI (Sub-contract)</span>
+              <span class="chip chip-theme"><i class="bi bi-cpu"></i> Data assimilation</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> ~ $170k</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>Carnegie Institution</div>
+            <div>2015—2016</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NASA"
+           data-text="above arctic boreal vulnerability experiment flux co2 ch4">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">ABoVE — Arctic-Boreal Vulnerability Experiment</div>
+            <div class="small text-muted mb-2">Co-I on CO₂/CH₄ flux quantification across vulnerable Arctic–Boreal ecosystems using multi-scale constraints.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-tree"></i> Arctic–Boreal fluxes</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2015—2019</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NASA"
+           data-text="oco-2 extension data assimilation mapping">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Extension of Data Assimilation &amp; Mapping (OCO-2)</div>
+            <div class="small text-muted mb-2">Extended mapping/assimilation frameworks to ingest OCO-2 data.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-map"></i> Mapping / DA</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> $265,949</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2011—2013</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NSF"
+           data-text="nsf si2 ssi software infrastructure real time large scale co2">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">SI2-SSI: Real-Time Large-Scale CO₂ Data Assimilation System</div>
+            <div class="small text-muted mb-2">Software infrastructure for sustained, real-time, large-scale CO₂ data assimilation.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-code-square"></i> Software infrastructure</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> ~ $1.9M</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NSF</div>
+            <div>2011—2014</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="NASA"
+           data-text="acos atmospheric carbon observations from space in situ satellite fluxes north america">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Atmospheric Carbon Observations from Space</div>
+            <div class="small text-muted mb-2">Combined in-situ and satellite CO₂ observing network to constrain biospheric and anthropogenic fluxes.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-globe-americas"></i> Space + in-situ integration</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> $754,760</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>NASA</div>
+            <div>2010—2013</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-group-item py-3 item" data-status="completed" data-role="Co-I" data-agency="DOE"
+           data-text="doe sandia ldrd kalman filtered compressive sensing sparse estimation">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="flex-grow-1">
+            <div class="item-title">Kalman-Filtered Compressive Sensing (Sandia LDRD)</div>
+            <div class="small text-muted mb-2">Sparse emissions estimation from limited measurements using Kalman filtering plus compressive sensing.</div>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="chip chip-role"><i class="bi bi-award"></i> Role: Co-I</span>
+              <span class="chip chip-theme"><i class="bi bi-filter-square"></i> Sparse estimation</span>
+              <span class="chip chip-status completed"><i class="bi bi-check2-circle"></i> Completed</span>
+              <span class="chip chip-budget"><i class="bi bi-cash-coin"></i> ~ $184k</span>
+            </div>
+          </div>
+          <div class="item-meta ms-md-3 mt-2 mt-md-0">
+            <div>DOE Sandia</div>
+            <div>2010—2013</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer py-4"><div class="container d-flex justify-content-between">
+    <small class="text-muted">© <span id="y"></span> Vineet Yadav</small><a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+  </div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // nav active
+    const p = location.pathname.replace(/\/+$/,'')||'/';
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){ a.classList.add('active'); a.setAttribute('aria-current','page'); }
+    });
+
+    // search + pill filters
+    const q = document.getElementById('q');
+    const items = [...document.querySelectorAll('.item')];
+    const filters = [...document.querySelectorAll('.filter')];
+    let mode = 'all';  // ongoing|completed|role:...
+
+    function apply() {
+      const term = (q.value || '').toLowerCase().trim();
+      items.forEach(el=>{
+        const status = el.dataset.status;
+        const role = el.dataset.role;
+        const text = (el.dataset.text+' '+role+' '+status+' '+el.dataset.agency).toLowerCase();
+        const passText = !term || text.includes(term);
+        let passMode = true;
+        if (mode==='ongoing') passMode = status==='ongoing';
+        else if (mode==='completed') passMode = status==='completed';
+        else if (mode.startsWith('role:')) passMode = role === mode.slice(5);
+        el.style.display = (passText && passMode) ? '' : 'none';
+      });
+    }
+
+    filters.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        mode = btn.dataset.filter;
+        filters.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        apply();
+      });
+    });
+
+    document.getElementById('clear').addEventListener('click', ()=>{
+      q.value = ''; mode = 'all';
+      filters.forEach(b=>b.classList.remove('active'));
+      apply();
+    });
+
+    q.addEventListener('input', apply);
+  </script>
+</body>
+</html>
+
+
+

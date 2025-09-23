@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apps & Dashboard — Vineet Yadav</title>
+
+  <!-- Theme & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Perf hints for the dashboard host -->
+  <link rel="dns-prefetch" href="https://la-megacity-dashboard-826691286079.us-west2.run.app">
+  <link rel="preconnect" href="https://la-megacity-dashboard-826691286079.us-west2.run.app" crossorigin>
+
+  <style>
+    /* Page polish (unchanged) */
+    .app-card .badge, .dash-card .badge { font-weight: 500; }
+    .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.25rem .6rem; border-radius:1rem; font-size:.8rem; border:1px solid rgba(0,0,0,.1); background:#f8f9fa; }
+    .chip-data { background:#fff3cd; border-color:#ffe69c; color:#6c4f00; }
+    .chip-cloud { background:#e7f1ff; border-color:#cfe2ff; color:#084298; }
+    .chip-status { background:#f8f9fa; border-color:#e9ecef; color:#495057; }
+    .chip-live { background:#eaf7ea; border-color:#cfe9cf; color:#0a7a0a; }
+    .chip-slow { background:#fff3cd; border-color:#ffe69c; color:#6c4f00; }
+    .chip-down { background:#fdecea; border-color:#f5c2c7; color:#842029; }
+    .chip-status .bi-circle-fill { font-size:.6rem; }
+    .feature-list li { margin-bottom:.25rem; }
+    .device-frame { border:12px solid #111; border-bottom-width:18px; border-radius:28px; box-shadow:0 10px 30px rgba(0,0,0,.15); overflow:hidden; }
+    .device-frame img, .device-frame video { display:block; width:100%; height:auto; }
+    .thumb { border-radius:.5rem; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+    .section-kicker { color:#0d6efd; font-weight:600; letter-spacing:.02em; }
+    .helper-note { font-size:.85rem; color:#6c757d; }
+  </style>
+</head>
+<body>
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/projects.html">Apps &amp; Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="/publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <h1 class="section-title">Apps &amp; Dashboard</h1>
+
+    <!-- TerraOorja App -->
+    <section id="terraoorja" class="row g-4 align-items-center mb-5 app-card">
+      <div class="col-lg-6">
+        <div class="section-kicker mb-1"><i class="bi bi-phone me-1"></i> Mobile Application</div>
+        <h3 class="mb-2">TerraOorja — Decarbonization App</h3>
+        <p class="mb-3">Agent-based modeling at census-tract resolution for household &amp; business decarbonization. Explore CAPEX/OPEX, incentives, and policy scenarios with GIS-aware context.</p>
+
+        <ul class="feature-list ps-3 mb-3">
+          <li><i class="bi bi-check-circle text-success me-1"></i> Agent-based models for technology adoption</li>
+          <li><i class="bi bi-check-circle text-success me-1"></i> Cost curves &amp; payback under policy scenarios</li>
+          <li><i class="bi bi-check-circle text-success me-1"></i> Map-centric flows with local context</li>
+        </ul>
+
+        <!-- UPDATED tech stack chips -->
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="chip"><i class="bi bi-phone"></i> Flutter (Dart)</span>
+          <span class="chip"><i class="bi bi-gear"></i> Python prototype</span>
+          <span class="chip"><i class="bi bi-geo-alt"></i> GIS</span>
+          <span class="chip chip-status"><i class="bi bi-lock"></i> Private repo</span>
+        </div>
+
+        <!-- UPDATED buttons: removed public "Source", added Contact -->
+        <div class="d-flex flex-wrap gap-2 mb-2">
+          <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/terraoorja/id6751678652" target="_blank" rel="noopener">
+            <i class="bi bi-apple me-1"></i> App Store
+          </a>
+          <a class="btn btn-outline-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.terraooorja.energy_app" target="_blank" rel="noopener">
+            <i class="bi bi-android2 me-1"></i> Google Play
+          </a>
+          <a class="btn btn-outline-secondary btn-sm" href="/contact.html">
+            <i class="bi bi-envelope me-1"></i> Contact for collaboration
+          </a>
+          <a class="btn btn-outline-secondary btn-sm" href="https://apps.apple.com/us/app/terraoorja/id6751678652#see-all/whats-new" target="_blank" rel="noopener">
+            <i class="bi bi-film me-1"></i> Screenshots &amp; Clip
+          </a>
+        </div>
+
+        <!-- UPDATED note -->
+        <div class="helper-note">
+          Algorithms were prototyped in Python; the production app is written in Dart/Flutter. Source code is private (available for collaborations on request).
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="device-frame">
+          <img loading="lazy" class="thumb"
+               src="/assets/images/app_fullscreen.png"
+               alt="TerraOorja app screenshots">
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-4">
+
+    <!-- LA Megacity Dashboard (unchanged) -->
+    <section id="la-dashboard" class="row g-4 align-items-center mb-2 dash-card">
+      <div class="col-lg-6 order-lg-2">
+        <div class="section-kicker mb-1"><i class="bi bi-bar-chart-line me-1"></i> Web Dashboard</div>
+        <h3 class="mb-2">LA Megacity GHG Dashboard</h3>
+        <p class="mb-3">Interactive analytics for greenhouse-gas monitoring in the Los Angeles megacity, fusing satellite, in-situ, and model products with real-time views.</p>
+
+        <ul class="feature-list ps-3 mb-3">
+          <li><i class="bi bi-check-circle text-success me-1"></i> Multi-source data fusion (satellite + ground + inversions)</li>
+          <li><i class="bi bi-check-circle text-success me-1"></i> Map, trend, and attribution views</li>
+          <li><i class="bi bi-check-circle text-success me-1"></i> Deployed on Google Cloud Run</li>
+        </ul>
+
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="chip"><i class="bi bi-bar-chart"></i> Dash/Plotly</span>
+          <span class="chip chip-cloud"><i class="bi bi-cloud"></i> Cloud Run</span>
+          <span class="chip chip-data"><i class="bi bi-database"></i> ~500 MB initial load</span>
+
+          <!-- Live status chip -->
+          <span id="dash-status" class="chip chip-status" title="Service status">
+            <i class="bi bi-circle-fill"></i> <span class="label">Checking…</span>
+          </span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-2">
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#launchDashboard">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Open Dashboard
+          </button>
+          <a class="btn btn-outline-secondary btn-sm" href="#dash-notes">
+            <i class="bi bi-info-circle me-1"></i> Performance Notes
+          </a>
+        </div>
+        <div class="helper-note">We show a confirm dialog before opening the live app so users aren’t surprised by the heavy load on free tier.</div>
+      </div>
+
+      <div class="col-lg-6 order-lg-1">
+        <img loading="lazy" class="thumb w-100"
+             src="/assets/images/la-dashboard-analysis.png"
+             alt="LA Megacity dashboard">
+      </div>
+    </section>
+
+    <!-- Performance Notes (unchanged) -->
+    <section id="dash-notes" class="mt-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="mb-2"><i class="bi bi-rocket-takeoff me-1 text-primary"></i> Performance notes (free tier)</h6>
+          <ul class="mb-0 helper-note ps-3">
+            <li>First open may fetch ~500 MB. Keep a static <strong>tour</strong> screenshot above so this page stays fast.</li>
+            <li>Add <strong>HTTP caching</strong> and <strong>pre-computed tiles</strong> where possible; load heavy datasets <strong>on demand</strong> (per tab/map extent).</li>
+            <li>Consider a <strong>lightweight landing route</strong> on the dashboard that only fetches metadata until a user requests a view.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4"><div class="container d-flex justify-content-between">
+    <small class="text-muted">© <span id="y"></span> Vineet Yadav</small><a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+  </div></footer>
+
+  <!-- Launch modal (warn about heavy load) -->
+  <div class="modal fade" id="launchDashboard" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title"><i class="bi bi-exclamation-triangle text-warning me-2"></i>Heads up</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          The live dashboard may take time to load on free tier (initial download ≈ 500 MB).
+          We’ll open it in a new tab so you can keep browsing here.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" target="_blank" rel="noopener"
+             href="https://la-megacity-dashboard-826691286079.us-west2.run.app/page-1">
+            Open Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Footer year + active nav
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const p = location.pathname.replace(/\/+$/,'')||'/';
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){ a.classList.add('active'); a.setAttribute('aria-current','page'); }
+    });
+
+    // Live status ping (unchanged)
+    const DASH_URL = 'https://la-megacity-dashboard-826691286079.us-west2.run.app/page-1';
+    const STATUS_EL = document.getElementById('dash-status');
+
+    function setStatus(state, ms) {
+      const icon = STATUS_EL.querySelector('.bi-circle-fill');
+      const label = STATUS_EL.querySelector('.label');
+      STATUS_EL.classList.remove('chip-live','chip-slow','chip-down');
+      let text = 'Checking…';
+      if (state === 'live') {
+        STATUS_EL.classList.add('chip-live');
+        icon.style.color = '#198754';
+        text = ms ? `Live (${Math.round(ms)} ms)` : 'Live';
+      } else if (state === 'slow') {
+        STATUS_EL.classList.add('chip-slow');
+        icon.style.color = '#fd7e14';
+        text = ms ? `Slow (${Math.round(ms)} ms)` : 'Slow';
+      } else if (state === 'down') {
+        STATUS_EL.classList.add('chip-down');
+        icon.style.color = '#dc3545';
+        text = 'Offline';
+      }
+      label.textContent = text;
+      STATUS_EL.title = `Status: ${text} • ${new Date().toLocaleTimeString()}`;
+    }
+
+    async function ping(url, { timeout = 4000 } = {}) {
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), timeout);
+      const t0 = performance.now();
+      try {
+        await fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store', redirect: 'follow', signal: controller.signal });
+        const dt = performance.now() - t0;
+        clearTimeout(t);
+        return { reachable: true, ms: dt };
+      } catch (e) {
+        clearTimeout(t);
+        return { reachable: false, ms: timeout };
+      }
+    }
+
+    async function checkDashboard() {
+      const { reachable, ms } = await ping(DASH_URL, { timeout: 4000 });
+      if (!reachable) setStatus('down');
+      else if (ms < 1500) setStatus('live', ms);
+      else setStatus('slow', ms);
+    }
+    checkDashboard();
+    setInterval(checkDashboard, 60000);
+  </script>
+</body>
+</html>
+

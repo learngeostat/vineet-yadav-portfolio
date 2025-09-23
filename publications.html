@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Vineet Yadav</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <!-- top accent + shared navbar -->
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects.html">Apps &amp; Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <h1 class="section-title">Publications</h1>
+    <p class="text-muted mb-3">Organized by contribution focus. Use the search or quick filters to find a paper fast.</p>
+
+    <!-- Quick tools -->
+    <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
+      <div class="input-group" style="max-width:520px;">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input id="pubSearch" type="search" class="form-control" placeholder="Search title, journal, year…">
+      </div>
+      <div class="ms-auto d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="all">All</button>
+        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="oa">Open Access</button>
+        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="2025">2025</button>
+        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="2024">2024</button>
+        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="2023">2023</button>
+        <button class="btn btn-outline-secondary btn-sm" id="clearFilters">Clear</button>
+      </div>
+    </div>
+
+    <!-- ===== Algorithm-Focused ===== -->
+    <div class="card mb-4" id="algorithms">
+      <div class="card-header d-flex align-items-center">
+        <i class="bi bi-cpu me-2 text-primary"></i>
+        <h3 class="mb-0">Algorithm-Focused</h3>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-flush">
+
+          <!-- GMD 2013 -->
+          <div class="list-group-item px-0 pub" data-year="2013" data-tags="algorithms linear-algebra inverse">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Improving computational efficiency in large linear inverse problems: an example from carbon dioxide flux estimation</h6>
+              <small class="text-muted">Geosci. Model Dev., 2013</small>
+            </div>
+            <p class="mb-1 small">O(n²·⁵) methods for Kronecker-structured matrices and UQ.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-6-583-2013" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://gmd.copernicus.org/articles/6/583/2013/" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Publisher</a>
+            </div>
+          </div>
+
+          <!-- GMD Discuss 2016 -->
+          <div class="list-group-item px-0 pub" data-year="2016" data-tags="algorithms sparse hpc">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Improving the computational efficiency of sparse matrix multiplication in linear atmospheric inverse problems</h6>
+              <small class="text-muted">GMD Discuss., 2016</small>
+            </div>
+            <p class="mb-1 small">Sparse×sparse covariance operations; basis of NOAA CarbonTracker-Lagrange integration.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-2016-204" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Preprint</a>
+            </div>
+          </div>
+
+          <!-- GMD 2015 Sparse reconstruction -->
+          <div class="list-group-item px-0 pub" data-year="2015" data-tags="algorithms sparse inversion">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">A sparse reconstruction method for the estimation of multi-resolution emission fields via atmospheric inversion</h6>
+              <small class="text-muted">Geosci. Model Dev., 2015</small>
+            </div>
+            <p class="mb-1 small">Multiresolution sparse reconstruction for inverse problems.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-8-1259-2015" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- GMD 2015 Block kriging -->
+          <div class="list-group-item px-0 pub" data-year="2015" data-tags="algorithms geostatistics kriging">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Mapping of satellite Earth observations using moving window block kriging</h6>
+              <small class="text-muted">Geosci. Model Dev., 2015</small>
+            </div>
+            <p class="mb-1 small">Efficient kriging for satellite interpolation with moving windows.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-8-3311-2015" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- Bayesian fusion (arXiv 2025) -->
+          <div class="list-group-item px-0 pub" data-year="2025" data-tags="algorithms bayesian oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">A Bayesian hierarchical framework for fusion of remote sensing data: An example with solar-induced fluorescence</h6>
+              <small class="text-muted">arXiv, 2025</small>
+            </div>
+            <p class="mb-1 small">General fusion framework for multi-source remote sensing.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.48550/arXiv.2503.03901" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://arxiv.org/abs/2503.03901" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Method-Focused ===== -->
+    <div class="card mb-4" id="methods">
+      <div class="card-header d-flex align-items-center">
+        <i class="bi bi-tools me-2 text-success"></i>
+        <h3 class="mb-0">Method-Focused</h3>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-flush">
+
+          <!-- GMD 2023 Metrics -->
+          <div class="list-group-item px-0 pub" data-year="2023" data-tags="methods metrics inverse">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Metrics for evaluating the quality in linear atmospheric inverse problems: a case study of a trace gas inversion</h6>
+              <small class="text-muted">Geosci. Model Dev., 2023</small>
+            </div>
+            <p class="mb-1 small">Comprehensive evaluation framework for inverse systems.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-16-5219-2023" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://gmd.copernicus.org/articles/16/5219/2023/" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Publisher</a>
+            </div>
+          </div>
+
+          <!-- JGR 2012 EnKF -->
+          <div class="list-group-item px-0 pub" data-year="2012" data-tags="methods enkf">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Toward reliable ensemble Kalman filter estimates of CO₂ fluxes</h6>
+              <small class="text-muted">J. Geophys. Res., 2012</small>
+            </div>
+            <p class="mb-1 small">Improved EnKF practice for carbon flux estimation.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.1029/2012JD018176" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- GMD 2014 multiresolution parameterization -->
+          <div class="list-group-item px-0 pub" data-year="2014" data-tags="methods inversion parameterization">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">A multiresolution spatial parameterization for the estimation of fossil-fuel CO₂ emissions via atmospheric inversions</h6>
+              <small class="text-muted">Geosci. Model Dev., 2014</small>
+            </div>
+            <p class="mb-1 small">Spatial parameterization for multi-scale emissions.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-7-1901-2014" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- GMD 2024 Functional ANOVA -->
+          <div class="list-group-item px-0 pub" data-year="2024" data-tags="methods statistics oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Functional analysis of variance (ANOVA) for carbon flux estimates from remote sensing data</h6>
+              <small class="text-muted">Geosci. Model Dev., 2024</small>
+            </div>
+            <p class="mb-1 small">Spatiotemporal ANOVA with uncertainty partitioning across inversions.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.5194/gmd-17-1133-2024" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://gmd.copernicus.org/articles/17/1133/2024/" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Publisher</a>
+            </div>
+          </div>
+
+          <!-- GRL 2020 multi-tiered observing networks -->
+          <div class="list-group-item px-0 pub" data-year="2020" data-tags="methods networks methane">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Synthesis of methane observations across scales: strategies for deploying a multitiered observing network</h6>
+              <small class="text-muted">Geophys. Res. Lett., 2020</small>
+            </div>
+            <p class="mb-1 small">Integrated observing system design for methane.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.1029/2020GL087869" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Science-Focused ===== -->
+    <div class="card mb-4" id="science">
+      <div class="card-header d-flex align-items-center">
+        <i class="bi bi-graph-up me-2 text-info"></i>
+        <h3 class="mb-0">Science-Focused</h3>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-flush">
+
+          <!-- ERL 2023 LA CH4 decline -->
+          <div class="list-group-item px-0 pub" data-year="2023" data-tags="science methane la oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">A declining trend of methane emissions in the Los Angeles basin from 2015 to 2020</h6>
+              <small class="text-muted">Environ. Res. Lett., 2023</small>
+            </div>
+            <p class="mb-1 small">LA-basin top-down trend analysis showing ~7% decline (2015-2020).</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.1088/1748-9326/acb6a9" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- PNAS 2022 Super-emitters -->
+          <div class="list-group-item px-0 pub" data-year="2022" data-tags="science methane super-emitters oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Strong methane point sources contribute a disproportionate fraction of total emissions across multiple U.S. basins</h6>
+              <small class="text-muted">PNAS, 2022</small>
+            </div>
+            <p class="mb-1 small">Super-emitters dominate basin-total emissions across U.S. basins.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.1073/pnas.2202338119" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://www.pnas.org/doi/10.1073/pnas.2202338119" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Publisher</a>
+            </div>
+          </div>
+
+          <!-- Nature 2019 super-emitters (California) -->
+          <div class="list-group-item px-0 pub" data-year="2019" data-tags="science methane california">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">California’s methane super-emitters</h6>
+              <small class="text-muted">Nature, 2019</small>
+            </div>
+            <p class="mb-1 small">Identification/attribution of largest point sources in California.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.1038/s41586-019-1720-3" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- JGR 2019 LA flux map -->
+          <div class="list-group-item px-0 pub" data-year="2019" data-tags="science methane la oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Spatio-temporally resolved methane fluxes from the Los Angeles Megacity</h6>
+              <small class="text-muted">JGR Atmos., 2019</small>
+            </div>
+            <p class="mb-1 small">High-resolution flux maps across the LA basin.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.1029/2018JD030062" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://www.osti.gov/biblio/1525191" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> OSTI</a>
+            </div>
+          </div>
+
+          <!-- PNAS 2020 radiocarbon -->
+          <div class="list-group-item px-0 pub" data-year="2020" data-tags="science radiocarbon la oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Large and seasonally varying biospheric CO₂ fluxes in the Los Angeles megacity revealed by atmospheric radiocarbon</h6>
+              <small class="text-muted">PNAS, 2020</small>
+            </div>
+            <p class="mb-1 small">Radiocarbon constraints on urban biospheric CO₂ in LA.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.1073/pnas.2005253117" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://authors.library.caltech.edu/105077/1/26681.full.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+          </div>
+
+          <!-- ERL 2020 Underground gas storage -->
+          <div class="list-group-item px-0 pub" data-year="2020" data-tags="science methane storage oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Methane emissions from underground gas storage in California</h6>
+              <small class="text-muted">Environ. Res. Lett., 2020</small>
+            </div>
+            <p class="mb-1 small">UGS system methane quantification in CA.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.1088/1748-9326/ab751d" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </div>
+
+          <!-- GRL 2019 Nat gas correlation -->
+          <div class="list-group-item px-0 pub" data-year="2019" data-tags="science methane los-angeles oa" data-badge="oa">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Atmospheric methane emissions correlate with natural gas consumption in Los Angeles</h6>
+              <small class="text-muted">Geophys. Res. Lett., 2019</small>
+            </div>
+            <p class="mb-1 small">Links sectoral gas use with atmospheric CH₄ in LA.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-success">Open Access</span>
+              <a class="link-primary" href="https://doi.org/10.1029/2019GL083400" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://agupubs.onlinelibrary.wiley.com/doi/am-pdf/10.1029/2019gl083400" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+          </div>
+
+          <!-- EST 2025 Single-site scaling -->
+          <div class="list-group-item px-0 pub" data-year="2025" data-tags="science methane urban">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">Scaling Urban Methane Emissions: Utility of Single-Site Measurements in Five Urban Domains</h6>
+              <small class="text-muted">Environ. Sci. Technol., 2025</small>
+            </div>
+            <p class="mb-1 small">Bayesian scaling using single-tower observations across five cities.</p>
+            <div class="d-flex flex-wrap gap-2 small">
+              <a class="link-primary" href="https://doi.org/10.1021/acs.est.5c03844" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a class="link-secondary" href="https://pubs.acs.org/doi/10.1021/acs.est.5c03844" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Publisher</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Show more pattern if you want to append long back-catalog later -->
+        <!-- <div class="text-center mt-3"><button class="btn btn-outline-info btn-sm" id="showMore">Show more</button></div> -->
+      </div>
+    </div>
+
+    <!-- Footer links -->
+    <div class="mt-4 d-flex flex-wrap gap-2">
+      <a class="btn btn-outline-secondary btn-sm" href="https://scholar.google.com/" target="_blank" rel="noopener">
+        <i class="bi bi-journal-text me-1"></i>Complete list (Google Scholar)
+      </a>
+      <a class="btn btn-outline-secondary btn-sm" href="/publications.bib">
+        <i class="bi bi-filetype-bib me-1"></i>BibTeX
+      </a>
+      <a class="btn btn-outline-secondary btn-sm" href="/VineetYadav_CV.pdf">
+        <i class="bi bi-download me-1"></i>Full CV
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer py-4"><div class="container d-flex justify-content-between">
+    <small class="text-muted">© <span id="y"></span> Vineet Yadav</small><a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+  </div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // search + filter
+    const items = [...document.querySelectorAll('.pub')];
+    const q = document.getElementById('pubSearch');
+    const btns = document.querySelectorAll('.filter-btn');
+    const clearBtn = document.getElementById('clearFilters');
+    let activeFilter = 'all';
+
+    function applyFilters(){
+      const term = (q.value || '').toLowerCase().trim();
+      items.forEach(el => {
+        const hay = (el.textContent || '').toLowerCase();
+        const year = el.getAttribute('data-year');
+        const tags = (el.getAttribute('data-tags') || '');
+        const badge = (el.getAttribute('data-badge') || '');
+        const passText = !term || hay.includes(term);
+        const passFilter =
+          activeFilter === 'all' ||
+          year === activeFilter ||
+          (activeFilter === 'oa' && badge === 'oa');
+        el.style.display = (passText && passFilter) ? '' : 'none';
+      });
+    }
+    q.addEventListener('input', applyFilters);
+    btns.forEach(b => b.addEventListener('click', () => {
+      activeFilter = b.dataset.filter;
+      btns.forEach(x => x.classList.toggle('active', x===b));
+      applyFilters();
+    }));
+    clearBtn.addEventListener('click', () => { q.value=''; activeFilter='all'; btns.forEach(x=>x.classList.remove('active')); applyFilters(); });
+
+    // mark current nav
+    const p = location.pathname.replace(/\/+$/,'')||'/';
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){
+        a.classList.add('active');
+        a.setAttribute('aria-current','page');
+      }
+    });
+  </script>
+</body>
+</html>
+
+

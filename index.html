@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vineet Yadav — Algorithms • Inversions • Products</title>
+  <meta name="description" content="Technical leader at NASA JPL. Algorithms & HPC, Bayesian/Geostatistical inversions, and product delivery (apps, dashboards, NASA data products). h-index 27." />
+  <meta name="author" content="Vineet Yadav" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vineet Yadav — Algorithms • Inversions • Products" />
+  <meta property="og:description" content="Algorithms & HPC, Bayesian/Geostatistical inversions, and product delivery (apps, dashboards, NASA data products). h-index 27." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og/home.jpg" />
+  <meta property="og:url" content="https://your-domain.example/" />
+
+  <!-- Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Hard override to eliminate the inner dark line on screenshots -->
+  <style>
+    /* Card polish */
+    .hero{padding:6.5rem 0 3rem;background:linear-gradient(135deg,rgba(13,110,253,.06),rgba(13,202,240,.04))}
+    .metrics .stat{font-weight:700;font-size:2rem;line-height:1}
+    .metrics .label{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:#6c757d}
+    .pedigree{background:#f8fbff;border:1px solid #e7f1ff;border-radius:.75rem}
+    .pillars .card{border:none;border-left:4px solid var(--bs-primary);box-shadow:0 2px 14px rgba(0,0,0,.06);border-radius:.75rem}
+    .pillars .bi{color:var(--bs-primary)}
+    .feature-card{border:none;box-shadow:0 2px 14px rgba(0,0,0,.06);border-radius:.75rem}
+    .chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid rgba(0,0,0,.08);background:#f8f9fa;font-weight:600}
+    .chip i{font-size:.9rem}
+    .section-title{margin-top:2.25rem}
+    .top-accent{height:6px;background:linear-gradient(90deg,#0d6efd,#20c997)}
+
+    /* === Frame/shadow lives on a wrapper, not the image === */
+    .img-frame{
+      border:8px solid #fff;
+      border-radius:.5rem;           /* match card radius vibe */
+      box-shadow:0 4px 12px rgba(0,0,0,.15);
+      overflow:hidden;               /* clip image corners to the frame */
+    }
+    /* Nuke any image borders/shadows that might be coming from site.css */
+    .img-frame > img.card-img-top{
+      display:block;
+      width:100%;
+      height:auto;
+      border:0 !important;
+      box-shadow:none !important;    /* kills the old inset line for good */
+      background:transparent;
+    }
+  </style>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Vineet Yadav",
+    "jobTitle":"Data Scientist",
+    "worksFor":{"@type":"Organization","name":"NASA Jet Propulsion Laboratory"},
+    "email":"mailto:yadavvineet@gmail.com",
+    "url":"https://your-domain.example",
+    "sameAs":[
+      "https://www.linkedin.com/in/vineet-yadav-a81ab46b",
+      "https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en",
+      "https://github.com/learngeostat"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects.html">Apps &amp; Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="/publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf" aria-label="Download CV">CV</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <h1 class="fw-bold mb-3">Algorithms ⇢ Inversions ⇢ Products</h1>
+          <p class="lead mb-3">
+            Technical leader at NASA JPL. I design algorithms for large-scale inversion and data fusion—and ship them into operational systems,
+            public data products, and end-user apps & dashboards.
+          </p>
+
+          <!-- Pedigree strip -->
+          <div class="pedigree p-3 mb-3">
+            <strong>Credentials:</strong>
+            Ph.D. (Geography), University of Iowa <em>(scholarship-supported)</em> •
+            M.Phil (GIS & Remote Sensing, <strong>Distinction</strong>), University of Cambridge <em>(DFID Scholar)</em> •
+            Research Fellow, University of Michigan •
+            Research Scientist, Carnegie Institution for Science (Stanford) •
+            Data Scientist, NASA JPL.
+          </div>
+
+          <!-- Quick actions -->
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a class="btn btn-primary" href="/algorithms.html"><i class="bi bi-cpu me-1"></i>Explore Algorithms</a>
+            <a class="btn btn-outline-primary" href="/projects.html"><i class="bi bi-phone me-1"></i>Apps & Dashboard</a>
+            <a class="btn btn-outline-secondary" href="/contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
+            <a class="btn btn-outline-secondary" href="mailto:yadavvineet@gmail.com" aria-label="Email"><i class="bi bi-send"></i></a>
+            <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/vineet-yadav-a81ab46b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="btn btn-outline-secondary" href="https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="bi bi-mortarboard"></i></a>
+            <a class="btn btn-outline-secondary" href="https://github.com/learngeostat" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+
+          <!-- Metrics -->
+          <div class="metrics row g-3 align-items-center">
+            <div class="col-6 col-md-3">
+              <div class="text-center">
+                <div class="stat">27</div><div class="label">h-index (Scholar)</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="text-center">
+                <div class="stat">3</div><div class="label">NASA DOIs</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="text-center">
+                <div class="stat">50+</div><div class="label">Peer-reviewed pubs</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="text-center">
+                <div class="stat">10+ yrs</div><div class="label">JPL experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="col-lg-5">
+          <div class="feature-card">
+            <div class="img-frame">
+              <img class="card-img-top" loading="lazy"
+                   src="https://dummyimage.com/1200x680/e9f2fb/0d6efd.png&text=Algorithms+%E2%80%A2+Inversions+%E2%80%A2+Products"
+                   alt="Portfolio preview">
+            </div>
+            <div class="card-body">
+              <div class="d-flex flex-wrap gap-2">
+                <span class="chip"><i class="bi bi-gear"></i> Algorithms & HPC</span>
+                <span class="chip"><i class="bi bi-diagram-3"></i> Bayesian/Geostatistical Inversion</span>
+                <span class="chip"><i class="bi bi-grid-1x2"></i> Apps & Dashboards</span>
+                <span class="chip"><i class="bi bi-database"></i> NASA Data Products</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <!-- Three pillars -->
+    <section class="pillars">
+      <h2 class="section-title">What I do</h2>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5"><i class="bi bi-cpu me-2"></i>Algorithms & HPC</h3>
+              <p class="mb-2">Kronecker O(n²·⁵) methods, sparse×sparse covariance ops, and PSD kernels for large inverse problems.</p>
+              <div class="mb-3">
+                <span class="chip">Kronecker</span> <span class="chip">Sparse ops</span> <span class="chip">PSD kernels</span>
+              </div>
+              <a class="btn btn-outline-primary btn-sm" href="/algorithms.html">See algorithms</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5"><i class="bi bi-diagram-3 me-2"></i>Bayesian/Geostatistical Inversions</h3>
+              <p class="mb-2">End-to-end HQHᵀ operators, UQ, and scalable inference used in operational pipelines and data products.</p>
+              <div class="mb-3">
+                <span class="chip">UQ</span> <span class="chip">HQHᵀ</span> <span class="chip">Fortran/Python</span>
+              </div>
+              <a class="btn btn-outline-primary btn-sm" href="/publications.html">See publications</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5"><i class="bi bi-grid-1x2 me-2"></i>Products & Programs</h3>
+              <p class="mb-2">TerraOorja mobile app, LA Megacity dashboard, and NASA GES DISC data products; PI/Co-I on multi-agency grants.</p>
+              <div class="mb-3">
+                <span class="chip"><i class="bi bi-phone"></i> App</span> <span class="chip"><i class="bi bi-bar-chart-line"></i> Dashboard</span> <span class="chip"><i class="bi bi-database"></i> DOIs</span>
+              </div>
+              <a class="btn btn-outline-primary btn-sm" href="/projects.html">See apps & dashboard</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured work -->
+    <section>
+      <h2 class="section-title">Featured</h2>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="card feature-card h-100">
+            <div class="img-frame">
+              <img class="card-img-top" loading="lazy"
+                   src="/assets/images/la_overview.png"
+                   alt="LA Megacity Dashboard">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 mb-2"><i class="bi bi-bar-chart-line me-2 text-success"></i>LA Megacity GHG Dashboard</h3>
+              <p class="mb-3">Interactive dashboard integrating satellite, in-situ, and model products for Los Angeles greenhouse gas monitoring.</p>
+              <a class="btn btn-primary btn-sm" href="https://la-megacity-dashboard-826691286079.us-west2.run.app/page-1" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-1"></i>Open dashboard</a>
+              <a class="btn btn-outline-secondary btn-sm" href="/projects.html#la-dashboard">Details</a>
+              <small class="text-muted d-block mt-2"><i class="bi bi-exclamation-triangle me-1"></i>May load slowly on free-tier hosting.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card feature-card h-100">
+            <div class="img-frame">
+              <img class="card-img-top" loading="lazy"
+                   src="/assets/images/app_overview.png"
+                   alt="TerraOorja app">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 mb-2"><i class="bi bi-phone me-2 text-primary"></i>TerraOorja — Decarbonization App</h3>
+              <p class="mb-3">Agent-based modeling for household/business decarbonization with policy scenarios and CAPEX analysis.</p>
+              <a class="btn btn-outline-primary btn-sm" href="https://apps.apple.com/us/app/terraoorja/id6751678652" target="_blank" rel="noopener"><i class="bi bi-apple me-1"></i>App Store</a>
+              <a class="btn btn-outline-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.terraooorja.energy_app" target="_blank" rel="noopener"><i class="bi bi-google-play me-1"></i>Google Play</a>
+              <a class="btn btn-outline-secondary btn-sm" href="/projects.html#terraoorja">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NASA Data Products -->
+    <section>
+      <h2 class="section-title">NASA Data Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>OCO-2 Gridded XCO₂ (Level 4)</h3>
+              <p class="small mb-2">Bias-corrected daily CO₂ data powering inversion and climate research.</p>
+              <span class="badge bg-primary">DOI: 10.5067/582L7HTJ343N</span>
+            </div>
+            <div class="card-footer bg-transparent">
+              <a class="btn btn-outline-primary btn-sm" href="/dataproducts.html#dp-l4">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>Multi-Instrument Fused XCO₂ (L4)</h3>
+              <p class="small mb-2">Cross-platform data fusion with consistent bias correction.</p>
+              <span class="badge bg-primary">DOI: 10.5067/ZS346LH1NTIS</span>
+            </div>
+            <div class="card-footer bg-transparent">
+              <a class="btn btn-outline-primary btn-sm" href="/dataproducts.html#dp-fused">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>OCO-2 Gridded XCO₂ &amp; SIF (Level 3)</h3>
+              <p class="small mb-2">Daily L3 fields combining XCO₂ and solar-induced fluorescence.</p>
+              <span class="badge bg-primary">DOI: 10.5067/0QR48EPN1BVR</span>
+            </div>
+            <div class="card-footer bg-transparent">
+              <a class="btn btn-outline-primary btn-sm" href="/dataproducts.html#dp-l3">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-secondary btn-sm" href="/dataproducts.html"><i class="bi bi-box-arrow-in-right me-1"></i>All data products</a>
+      </div>
+    </section>
+
+    <!-- Selected algorithms (teasers) -->
+    <section>
+      <h2 class="section-title">Selected Algorithms</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="d-flex align-items-start gap-3 p-3 feature-card h-100">
+            <i class="bi bi-cpu fs-4 text-primary"></i>
+            <div>
+              <h3 class="h6 mb-1">O(n²·⁵) Kronecker Methods</h3>
+              <p class="small mb-2">Reduces dominant multiplies in large inversions via Kronecker structure; demonstrated for continental CO₂ fluxes.</p>
+              <a class="link-primary small" href="https://gmd.copernicus.org/articles/6/583/2013/gmd-6-583-2013.html" target="_blank" rel="noopener">Paper (GMD 2013)</a>
+              · <a class="link-secondary small" href="/algorithms.html#linear-algebra">Overview</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-start gap-3 p-3 feature-card h-100">
+            <i class="bi bi-node-plus fs-4 text-primary"></i>
+            <div>
+              <h3 class="h6 mb-1">Sparse×Sparse Covariance Ops</h3>
+              <p class="small mb-2">Parallel, memory-aware multiplication tailored to inversion covariances/Jacobians; boosts throughput in pipelines.</p>
+              <a class="link-primary small" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener">Preprint (GMD Discuss. 2016)</a>
+              · <a class="link-secondary small" href="/algorithms.html#sparse">Overview</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-primary btn-sm" href="/algorithms.html"><i class="bi bi-box-arrow-in-right me-1"></i>See all algorithms</a>
+      </div>
+    </section>
+
+    <!-- Publications teaser -->
+    <section>
+      <h2 class="section-title">Publications</h2>
+      <p class="text-muted">Selected works across GMD, ERL, ACP, PNAS, Nature, and more.</p>
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <span class="chip"><i class="bi bi-journal-text"></i> Peer-reviewed: 30+</span>
+        <span class="chip"><i class="bi bi-bar-chart"></i> h-index 27 (Google Scholar)</span>
+      </div>
+      <a class="btn btn-outline-secondary btn-sm" href="/publications.html"><i class="bi bi-box-arrow-in-right me-1"></i>Browse publications</a>
+      <a class="btn btn-outline-success btn-sm ms-2" href="https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en" target="_blank" rel="noopener"><i class="bi bi-mortarboard me-1"></i>Google Scholar</a>
+    </section>
+
+    <!-- Grants / Program management teaser -->
+    <section>
+      <h2 class="section-title">Grants & Program Management</h2>
+      <p class="text-muted">PI/Co-I on multi-agency programs spanning NASA, NIST, DOE, and NSF.</p>
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <span class="chip"><i class="bi bi-people"></i> Cross-agency leadership</span>
+        <span class="chip"><i class="bi bi-diagram-3"></i> Delivery to operations</span>
+        <span class="chip"><i class="bi bi-clipboard-check"></i> Data products with DOIs</span>
+      </div>
+      <a class="btn btn-outline-secondary btn-sm" href="/grants.html"><i class="bi bi-box-arrow-in-right me-1"></i>See grants</a>
+    </section>
+
+    <!-- Contact CTA -->
+    <section>
+      <h2 class="section-title">Work with me</h2>
+      <div class="p-4 feature-card">
+        <p class="mb-3">I’m open to collaboration, consulting, and speaking. Fastest path is email; there’s also a contact form.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="/contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
+          <a class="btn btn-outline-secondary" href="mailto:yadavvineet@gmail.com"><i class="bi bi-send me-1"></i>Email</a>
+          <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/vineet-yadav-a81ab46b" target="_blank" rel="noopener"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+          <a class="btn btn-outline-secondary" href="/VineetYadav_CV.pdf"><i class="bi bi-download me-1"></i>CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex justify-content-between">
+      <small class="text-muted">© <span id="y"></span> Vineet Yadav</small>
+      <div class="d-flex gap-3">
+        <a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+        <a class="link-secondary" href="mailto:yadavvineet@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    const p=location.pathname.replace(/\/+$/,'')||'/';
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){a.classList.add('active');a.setAttribute('aria-current','page');}
+    });
+  </script>
+</body>
+</html>
+
+
+

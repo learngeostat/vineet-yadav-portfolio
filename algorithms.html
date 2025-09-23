@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Algorithms & Frameworks — Vineet Yadav</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    /* Local polish for this page (keeps your global CSS intact) */
+    .algo-card{border:none;border-left:4px solid var(--bs-primary);box-shadow:0 2px 14px rgba(0,0,0,.06);border-radius:.75rem}
+    .algo-icon{width:48px;height:48px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:rgba(13,110,253,.08)}
+    .algo-icon i{font-size:1.25rem;color:var(--bs-primary)}
+    .chip{background:rgba(13,110,253,.08);border:1px solid rgba(13,110,253,.2);border-radius:999px;padding:.25rem .6rem;font-size:.8rem;font-weight:600;margin-right:.35rem}
+    .section-anchor{scroll-margin-top:110px}
+  </style>
+</head>
+<body>
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/algorithms.html">Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects.html">Apps &amp; Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="/publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <h1 class="section-title">Algorithms & Frameworks</h1>
+    <p class="text-muted mb-4">Production-ready methods that power inversions, data fusion, and interactive products.</p>
+
+    <!-- Quick Jump filter -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <a class="btn btn-outline-primary btn-sm" href="#linear-algebra"><i class="bi bi-cpu me-1"></i>Linear Algebra</a>
+      <a class="btn btn-outline-primary btn-sm" href="#sparse"><i class="bi bi-node-plus me-1"></i>Sparse Ops</a>
+      <a class="btn btn-outline-primary btn-sm" href="#geostat"><i class="bi bi-map me-1"></i>Geostatistics</a>
+      <a class="btn btn-outline-primary btn-sm" href="#abm"><i class="bi bi-people me-1"></i>Agent-Based</a>
+      <a class="btn btn-outline-primary btn-sm" href="#bayes"><i class="bi bi-diagram-3 me-1"></i>Bayesian Inversions</a>
+    </div>
+
+    <!-- 1) Linear Algebra -->
+    <section id="linear-algebra" class="section-anchor">
+      <div class="card algo-card mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="algo-icon"><i class="bi bi-cpu"></i></span>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5 mb-1">O(n<sup>2.5</sup>) Kronecker Methods for Large Inverse Problems</h3>
+                <span class="text-muted small">GMD, 2013</span>
+              </div>
+              <p class="mb-2">
+                Reduces dominant multiplications by exploiting Kronecker structure in state/observation operators,
+                enabling materially larger state vectors and faster UQ on commodity hardware. Demonstrated on
+                continental-scale CO₂ flux estimation with practical implementation guidance.
+              </p>
+              <div class="mb-2">
+                <span class="chip">Kronecker products</span><span class="chip">UQ</span><span class="chip">Scaling</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="https://gmd.copernicus.org/articles/6/583/2013/gmd-6-583-2013.html" target="_blank" rel="noopener">
+                  <i class="bi bi-link-45deg me-1"></i>Paper (DOI: 10.5194/gmd-6-583-2013)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) Sparse × Sparse -->
+    <section id="sparse" class="section-anchor">
+      <div class="card algo-card mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="algo-icon"><i class="bi bi-node-plus"></i></span>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5 mb-1">Sparse×Sparse Covariance Multiplication for Inversions</h3>
+                <span class="text-muted small">GMD Discuss., 2016</span>
+              </div>
+              <p class="mb-2">
+                Memory-aware, parallel sparse-sparse multiplication tailored to inversion covariances/Jacobians,
+                improving throughput and cache behavior in production pipelines for trace-gas estimation. Preprint
+                details hybrid parallelization and triangular/dense-target variants for HQHᵀ patterns.
+              </p>
+              <div class="mb-2">
+                <span class="chip">OpenMP</span><span class="chip">Covariance ops</span><span class="chip">Throughput</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener">
+                  <i class="bi bi-link-45deg me-1"></i>Preprint (DOI: 10.5194/gmd-2016-204)
+                </a>
+                <a class="btn btn-outline-secondary btn-sm" href="https://gmd.copernicus.org/preprints/gmd-2016-204/gmd-2016-204.pdf" target="_blank" rel="noopener">
+                  <i class="bi bi-file-earmark-pdf me-1"></i>PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) Geostatistics / PSD Jaccard -->
+    <section id="geostat" class="section-anchor">
+      <div class="card algo-card mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="algo-icon"><i class="bi bi-map"></i></span>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5 mb-1">Sign-Aware Jaccard Correlograms & PSD Kernels</h3>
+                <span class="text-muted small">Technical note</span>
+              </div>
+              <p class="mb-2">
+                A bounded, scale-invariant similarity for mixed-sign signals that cleanly separates **phase (sign)**
+                and **magnitude** disagreement. The induced negative-type distance yields valid PSD kernels for kriging/GPs
+                and interpretable maps that distinguish phase vs. amplitude anisotropy.
+              </p>
+              <div class="mb-2">
+                <span class="chip">Correlograms</span><span class="chip">Variograms</span><span class="chip">PSD kernels</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <!-- Update these hrefs to your hosted PDFs -->
+                <a class="btn btn-outline-secondary btn-sm" href="/assets/docs/psd-jaccard-note.pdf" target="_blank" rel="noopener">
+                  <i class="bi bi-file-earmark-text me-1"></i>Technical Note (PDF)
+                </a>
+                <a class="btn btn-outline-secondary btn-sm" href="/assets/docs/psd-jaccard-examples.pdf" target="_blank" rel="noopener">
+                  <i class="bi bi-collection me-1"></i>Examples
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) Agent-Based Modeling -->
+    <section id="abm" class="section-anchor">
+      <div class="card algo-card mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="algo-icon"><i class="bi bi-people"></i></span>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5 mb-1">Census-Tract Agent-Based Decarbonization Model</h3>
+                <span class="text-muted small">Docs</span>
+              </div>
+              <p class="mb-2">
+                Tract-level ABM simulating household adoption of EVs, efficiency upgrades, and solar under configurable
+                policy instruments (income targeting, stacking, timing). Integrates ACS demographics and grid pathways,
+                reporting equity, cost-effectiveness, and leverage metrics across parallel runs.
+              </p>
+              <div class="mb-2">
+                <span class="chip">Policy design</span><span class="chip">Equity metrics</span><span class="chip">Parallel runs</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <!-- Point this to your uploaded ABM PDF -->
+                <a class="btn btn-outline-secondary btn-sm" href="/assets/docs/agent_based_model.pdf" target="_blank" rel="noopener">
+                  <i class="bi bi-file-earmark-text me-1"></i>Documentation (PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Bayesian / Geostatistical Inversions -->
+    <section id="bayes" class="section-anchor">
+      <div class="card algo-card">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="algo-icon"><i class="bi bi-diagram-3"></i></span>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="h5 mb-1">Bayesian / Geostatistical Inversions (Fortran Core)</h3>
+                <span class="text-muted small">Code</span>
+              </div>
+              <p class="mb-2">
+                Fortran-based inversion core implementing covariance construction, H·Q·Hᵀ operators, and parallel drivers
+                for large atmospheric problems. Includes batch/parallel scripts and modular source layout for operational
+                deployment in production pipelines.
+              </p>
+              <div class="mb-2">
+                <span class="chip">Fortran 90</span><span class="chip">HQHᵀ ops</span><span class="chip">Parallel</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="https://github.com/learngeostat/Atmospheric-Inverse-Modeling/tree/main" target="_blank" rel="noopener">
+                  <i class="bi bi-github me-1"></i>Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer py-4"><div class="container d-flex justify-content-between">
+    <small class="text-muted">© <span id="y"></span> Vineet Yadav</small><a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+  </div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    const p=location.pathname.replace(/\/+$/,'')||'/';
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){a.classList.add('active');a.setAttribute('aria-current','page');}
+    });
+  </script>
+</body>
+</html>
+

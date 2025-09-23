@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Vineet Yadav</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    /* Page polish (keeps global CSS intact) */
+    .contact-hero { margin-top: .25rem; }
+    .contact-hero .lead { color:#6c757d }
+    .card-callout { border-left:4px solid var(--bs-primary); border-radius:.75rem; box-shadow:0 2px 14px rgba(0,0,0,.06) }
+    .social-card { border:none; box-shadow:0 2px 14px rgba(0,0,0,.06); border-radius:.75rem }
+    .social-icon { width:40px; height:40px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:rgba(13,110,253,.08) }
+    .social-icon i { color:var(--bs-primary); font-size:1.1rem }
+    .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.25rem .6rem; border-radius:999px; font-size:.8rem; border:1px solid rgba(0,0,0,.1); background:#f8f9fa; font-weight:600 }
+    .chip i { font-size:.9rem }
+    .brand-ln { background:#e7f1ff; border-color:#cfe2ff; color:#084298 }
+    .brand-gh { background:#f0f1f3; border-color:#e5e7eb; color:#24292e }
+    .brand-sch { background:#eef9f1; border-color:#d3f0db; color:#0a7a0a }
+    .brand-mail { background:#fff3cd; border-color:#ffe69c; color:#6c4f00 }
+    .copy-btn { white-space:nowrap }
+    @media (max-width: 991.98px){ .copy-btn{ width:100% } }
+  </style>
+</head>
+<body>
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects.html">Apps &amp; Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="/publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <header class="contact-hero mb-3">
+      <h1 class="section-title">Get in Touch</h1>
+      <p class="lead">Fastest way: email. You can also reach me on LinkedIn, browse code on GitHub, or see publications on Google Scholar.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="chip brand-mail"><i class="bi bi-envelope"></i> Typical response 24–48h</span>
+        <span class="chip brand-ln"><i class="bi bi-linkedin"></i> Open to collaboration & speaking</span>
+      </div>
+    </header>
+
+    <div class="row g-4">
+      <!-- Left: Direct email + form -->
+      <div class="col-lg-6">
+        <div class="card card-body card-callout mb-4">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div>
+              <h5 class="mb-1"><i class="bi bi-envelope me-2"></i>Direct email</h5>
+              <a class="link-primary text-decoration-none" href="mailto:yadavvineet@gmail.com">yadavvineet@gmail.com</a>
+            </div>
+            <button id="copyEmail" class="btn btn-outline-secondary btn-sm copy-btn" type="button" aria-label="Copy email">
+              <i class="bi bi-clipboard me-1"></i> Copy
+            </button>
+          </div>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="card card-body">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="d-none"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <div class="mb-3"><label class="form-label">Name</label><input name="name" type="text" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Email</label><input name="email" type="email" class="form-control" required></div>
+          <div class="mb-3">
+            <label class="form-label">Subject</label>
+            <select name="subject" class="form-select" required>
+              <option value="">Select a topic...</option>
+              <option>Research Collaboration</option>
+              <option>Consulting Opportunity</option>
+              <option>Speaking Engagement</option>
+              <option>Employment Opportunity</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="mb-4"><label class="form-label">Message</label><textarea name="message" rows="5" class="form-control" required placeholder="Tell me about your project or opportunity..."></textarea></div>
+          <button class="btn btn-primary" type="submit"><i class="bi bi-send me-1"></i>Send</button>
+          <p class="text-muted small mb-0 mt-3"><i class="bi bi-shield-check me-1"></i> This form uses Netlify Forms; you’ll get a confirmation page on success.</p>
+        </form>
+      </div>
+
+      <!-- Right: Social / scholarly links -->
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="card social-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="social-icon"><i class="bi bi-linkedin"></i></span>
+                <div class="flex-grow-1">
+                  <h6 class="mb-1">LinkedIn</h6>
+                  <p class="mb-2 small text-muted">Professional profile, updates, and collaboration invites.</p>
+                  <a class="btn btn-outline-primary btn-sm" href="https://www.linkedin.com/in/vineet-yadav-a81ab46b" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Open profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card social-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="social-icon"><i class="bi bi-mortarboard"></i></span>
+                <div class="flex-grow-1">
+                  <h6 class="mb-1">Google Scholar</h6>
+                  <p class="mb-2 small text-muted">Publications, citations, and research metrics.</p>
+                  <a class="btn btn-outline-success btn-sm" href="https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> View Scholar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card social-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="social-icon"><i class="bi bi-github"></i></span>
+                <div class="flex-grow-1">
+                  <h6 class="mb-1">GitHub</h6>
+                  <p class="mb-2 small text-muted">Open-source code and examples.</p>
+                  <a class="btn btn-outline-dark btn-sm" href="https://github.com/learngeostat" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Explore repos
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional quick CTA to CV -->
+          <div class="col-12">
+            <div class="card social-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="social-icon"><i class="bi bi-file-earmark-person"></i></span>
+                <div class="flex-grow-1">
+                  <h6 class="mb-1">CV (PDF)</h6>
+                  <p class="mb-2 small text-muted">Full experience, publications, grants, and products.</p>
+                  <a class="btn btn-outline-secondary btn-sm" href="/VineetYadav_CV.pdf">
+                    <i class="bi bi-download me-1"></i> Download CV
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /row -->
+      </div><!-- /col -->
+    </div><!-- /grid -->
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex justify-content-between">
+      <small class="text-muted">© <span id="y"></span> Vineet Yadav</small><a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+    </div>
+  </footer>
+
+  <!-- Optional: Person schema for richer search results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Vineet Yadav",
+    "email":"mailto:yadavvineet@gmail.com",
+    "url":"https://your-domain.example",
+    "sameAs":[
+      "https://www.linkedin.com/in/vineet-yadav-a81ab46b",
+      "https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en",
+      "https://github.com/learngeostat"
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Footer year + active nav
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const p=location.pathname.replace(/\/+$/,'')||'/';
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){ a.classList.add('active'); a.setAttribute('aria-current','page'); }
+    });
+
+    // Copy email
+    document.getElementById('copyEmail').addEventListener('click', async () => {
+      const email = 'yadavvineet@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        const btn = document.getElementById('copyEmail');
+        btn.innerHTML = '<i class="bi bi-check2-circle me-1"></i> Copied';
+        setTimeout(()=>btn.innerHTML='<i class="bi bi-clipboard me-1"></i> Copy', 1600);
+      } catch(e) { /* no-op */ }
+    });
+  </script>
+</body>
+</html>
+
+
