@@ -15,13 +15,14 @@
   <!-- Theme & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
 
   <style>
     :root {
       --chip-bg:#f8f9fa;
       --chip-bd:rgba(0,0,0,.08);
     }
-    .top-accent{height:6px;background:linear-gradient(90deg,#0d6efd,#20c997)}
+    .top-accent { background:#e67e22; }
     .hero{padding:6.5rem 0 3rem;background:linear-gradient(135deg,rgba(13,110,253,.06),rgba(13,202,240,.04))}
     .pedigree{background:#f8fbff;border:1px solid #e7f1ff;border-radius:.75rem}
     .metrics .stat{font-weight:700;font-size:2rem;line-height:1}
@@ -79,7 +80,7 @@
 </head>
 <body>
   <div class="top-accent fixed-top"></div>
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">  
     <div class="container">
       <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
@@ -232,9 +233,9 @@
           <div class="card h-100">
             <div class="card-body">
               <h3 class="h5"><i class="bi bi-diagram-3 me-2"></i>Bayesian/Geostatistical Inversions</h3>
-              <p class="mb-2">End-to-end HQHᵀ operators, UQ, and scalable inference used in operational pipelines and data products.</p>
+              <p class="mb-2">End-to-end HQH^T operators, UQ, and scalable inference used in operational pipelines and data products.</p>
               <div class="mb-3">
-                <span class="chip">UQ</span> <span class="chip">HQHᵀ</span> <span class="chip">Fortran/Python</span>
+                <span class="chip">UQ</span> <span class="chip">HQH^T</span> <span class="chip">Fortran/Python</span>
               </div>
               <a class="btn btn-outline-primary btn-sm" href="/publications.html">See publications</a>
             </div>
@@ -281,7 +282,7 @@
               <img class="card-img-top" loading="lazy" src="/assets/images/app_overview.png" alt="TerraOorja app">
             </div>
             <div class="card-body">
-              <h3 class="h5 mb-2"><i class="bi bi-phone me-2 text-primary"></i>TerraOorja — Decarbonization App</h3>
+              <h3 class="h5 mb-2"><i class="bi bi-phone me-2 text-primary"></i>TerraOorja â€" Decarbonization App</h3>
               <p class="mb-3">Agent-based modeling for household/business decarbonization with policy scenarios and CAPEX analysis.</p>
               <a class="btn btn-outline-primary btn-sm" href="https://apps.apple.com/us/app/terraoorja/id6751678652" target="_blank" rel="noopener"><i class="bi bi-apple me-1"></i>App Store</a>
               <a class="btn btn-outline-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.terraooorja.energy_app" target="_blank" rel="noopener"><i class="bi bi-google-play me-1"></i>Google Play</a>
@@ -299,8 +300,8 @@
         <div class="col-md-4">
           <div class="card feature-card h-100">
             <div class="card-body">
-              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>OCO-2 Gridded XCO₂ (Level 4)</h3>
-              <p class="small mb-2">Bias-corrected daily CO₂ data powering inversion and climate research.</p>
+              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>OCO-2 Gridded XCOâ‚‚ (Level 4)</h3>
+              <p class="small mb-2">Bias-corrected daily COâ‚‚ data powering inversion and climate research.</p>
               <span class="badge bg-primary">DOI: 10.5067/582L7HTJ343N</span>
             </div>
             <div class="card-footer bg-transparent">
@@ -311,7 +312,7 @@
         <div class="col-md-4">
           <div class="card feature-card h-100">
             <div class="card-body">
-              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>Multi-Instrument Fused XCO₂ (L4)</h3>
+              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>Multi-Instrument Fused XCOâ‚‚ (L4)</h3>
               <p class="small mb-2">Cross-platform data fusion with consistent bias correction.</p>
               <span class="badge bg-primary">DOI: 10.5067/ZS346LH1NTIS</span>
             </div>
@@ -323,8 +324,8 @@
         <div class="col-md-4">
           <div class="card feature-card h-100">
             <div class="card-body">
-              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>OCO-2 Gridded XCO₂ &amp; SIF (Level 3)</h3>
-              <p class="small mb-2">Daily L3 fields combining XCO₂ and solar-induced fluorescence.</p>
+              <h3 class="h6 mb-1"><i class="bi bi-database me-2 text-info"></i>OCO-2 Gridded XCOâ‚‚ &amp; SIF (Level 3)</h3>
+              <p class="small mb-2">Daily L3 fields combining XCOâ‚‚ and solar-induced fluorescence.</p>
               <span class="badge bg-primary">DOI: 10.5067/0QR48EPN1BVR</span>
             </div>
             <div class="card-footer bg-transparent">
@@ -346,10 +347,10 @@
           <div class="d-flex align-items-start gap-3 p-3 feature-card h-100">
             <i class="bi bi-cpu fs-4 text-primary"></i>
             <div>
-              <h3 class="h6 mb-1">O(n²·⁵) Kronecker Methods</h3>
-              <p class="small mb-2">Reduces dominant multiplies in large inversions via Kronecker structure; demonstrated for continental CO₂ fluxes.</p>
+              <h3 class="h6 mb-1">O(nÂ²Â·âµ) Kronecker Methods</h3>
+              <p class="small mb-2">Reduces dominant multiplies in large inversions via Kronecker structure; demonstrated for continental COâ‚‚ fluxes.</p>
               <a class="link-primary small" href="https://gmd.copernicus.org/articles/6/583/2013/gmd-6-583-2013.html" target="_blank" rel="noopener">Paper (GMD 2013)</a>
-              · <a class="link-secondary small" href="/algorithms.html#linear-algebra">Overview</a>
+              Â· <a class="link-secondary small" href="/algorithms.html#linear-algebra">Overview</a>
             </div>
           </div>
         </div>
@@ -357,10 +358,10 @@
           <div class="d-flex align-items-start gap-3 p-3 feature-card h-100">
             <i class="bi bi-node-plus fs-4 text-primary"></i>
             <div>
-              <h3 class="h6 mb-1">Sparse×Sparse Covariance Ops</h3>
+              <h3 class="h6 mb-1">SparseÃ—Sparse Covariance Ops</h3>
               <p class="small mb-2">Parallel, memory-aware multiplication tailored to inversion covariances/Jacobians; boosts throughput in pipelines.</p>
               <a class="link-primary small" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener">Preprint (GMD Discuss. 2016)</a>
-              · <a class="link-secondary small" href="/algorithms.html#sparse">Overview</a>
+              Â· <a class="link-secondary small" href="/algorithms.html#sparse">Overview</a>
             </div>
           </div>
         </div>
@@ -398,7 +399,7 @@
     <section>
       <h2 class="section-title">Work with me</h2>
       <div class="p-4 feature-card">
-        <p class="mb-3">I’m open to collaboration, consulting, and speaking. Fastest path is email; there’s also a contact form.</p>
+        <p class="mb-3">Iâ€™m open to collaboration, consulting, and speaking. Fastest path is email; thereâ€™s also a contact form.</p>
         <div class="d-flex flex-wrap gap-2">
           <a class="btn btn-primary" href="/contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
           <a class="btn btn-outline-secondary" href="mailto:yadavvineet@gmail.com"><i class="bi bi-send me-1"></i>Email</a>
@@ -412,7 +413,7 @@
 
   <footer class="site-footer py-4">
     <div class="container d-flex justify-content-between">
-      <small class="text-muted">© <span id="y"></span> Vineet Yadav</small>
+      <small class="text-muted">Â© <span id="y"></span> Vineet Yadav</small>
       <div class="d-flex gap-3">
         <a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
         <a class="link-secondary" href="mailto:yadavvineet@gmail.com">Email</a>
