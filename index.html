@@ -10,44 +10,53 @@
   <meta property="og:description" content="Algorithms & HPC, Bayesian/Geostatistical inversions, and product delivery (apps, dashboards, NASA data products). h-index 27." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/og/home.jpg" />
-  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:url" content="https://vineet-yadav.netlify.app/" />
 
-  <!-- Theme -->
+  <!-- Theme & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site.css">
 
-  <!-- Hard override to eliminate the inner dark line on screenshots -->
   <style>
-    /* Card polish */
+    :root {
+      --chip-bg:#f8f9fa;
+      --chip-bd:rgba(0,0,0,.08);
+    }
+    .top-accent{height:6px;background:linear-gradient(90deg,#0d6efd,#20c997)}
     .hero{padding:6.5rem 0 3rem;background:linear-gradient(135deg,rgba(13,110,253,.06),rgba(13,202,240,.04))}
+    .pedigree{background:#f8fbff;border:1px solid #e7f1ff;border-radius:.75rem}
     .metrics .stat{font-weight:700;font-size:2rem;line-height:1}
     .metrics .label{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:#6c757d}
-    .pedigree{background:#f8fbff;border:1px solid #e7f1ff;border-radius:.75rem}
-    .pillars .card{border:none;border-left:4px solid var(--bs-primary);box-shadow:0 2px 14px rgba(0,0,0,.06);border-radius:.75rem}
-    .pillars .bi{color:var(--bs-primary)}
     .feature-card{border:none;box-shadow:0 2px 14px rgba(0,0,0,.06);border-radius:.75rem}
-    .chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid rgba(0,0,0,.08);background:#f8f9fa;font-weight:600}
-    .chip i{font-size:.9rem}
     .section-title{margin-top:2.25rem}
-    .top-accent{height:6px;background:linear-gradient(90deg,#0d6efd,#20c997)}
-
-    /* === Frame/shadow lives on a wrapper, not the image === */
-    .img-frame{
-      border:8px solid #fff;
-      border-radius:.5rem;           /* match card radius vibe */
-      box-shadow:0 4px 12px rgba(0,0,0,.15);
-      overflow:hidden;               /* clip image corners to the frame */
+    .chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid var(--chip-bd);background:var(--chip-bg);font-weight:600}
+    .chip i{font-size:.9rem}
+    /* Activity card */
+    .activity-card .icon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+    .activity-card .icon-item{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:.6rem;border:1px solid rgba(0,0,0,.06);border-radius:.75rem;background:#fff;text-decoration:none}
+    .activity-card .icon-item i{font-size:1.25rem}
+    .activity-card .icon-item span{font-size:.8rem}
+    .activity-card .icon-item:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+    .activity-card .bar{height:10px;border-radius:999px;background:
+      linear-gradient(90deg,
+        #0d6efd 0 25%,
+        #198754 25% 45%,
+        #20c997 45% 65%,
+        #0dcaf0 65% 80%,
+        #6f42c1 80% 95%,
+        #212529 95% 100%
+      );}
+    .legend-dot{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;margin-right:.35rem;vertical-align:middle}
+    .lg-algo{background:#0d6efd}.lg-apps{background:#198754}.lg-grants{background:#20c997}
+    .lg-data{background:#0dcaf0}.lg-pubs{background:#6f42c1}.lg-git{background:#212529}
+    @media (max-width: 992px){
+      .activity-card .icon-grid{grid-template-columns:repeat(3,1fr)}
     }
-    /* Nuke any image borders/shadows that might be coming from site.css */
-    .img-frame > img.card-img-top{
-      display:block;
-      width:100%;
-      height:auto;
-      border:0 !important;
-      box-shadow:none !important;    /* kills the old inset line for good */
-      background:transparent;
+    @media (max-width: 576px){
+      .activity-card .icon-grid{grid-template-columns:repeat(2,1fr)}
     }
+    /* Image frame polish for PNGs used below */
+    .img-frame{border:8px solid #fff;border-radius:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.15);overflow:hidden}
+    .img-frame>img{display:block;width:100%;height:auto;border:0;box-shadow:none;background:transparent}
   </style>
 
   <!-- Schema.org Person -->
@@ -59,7 +68,7 @@
     "jobTitle":"Data Scientist",
     "worksFor":{"@type":"Organization","name":"NASA Jet Propulsion Laboratory"},
     "email":"mailto:yadavvineet@gmail.com",
-    "url":"https://your-domain.example",
+    "url":"https://vineet-yadav.netlify.app/",
     "sameAs":[
       "https://www.linkedin.com/in/vineet-yadav-a81ab46b",
       "https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en",
@@ -84,7 +93,7 @@
           <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
-          <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf" aria-label="Download CV">CV</a>
+          <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
         </div>
       </div>
     </div>
@@ -93,12 +102,12 @@
   <!-- HERO -->
   <header class="hero">
     <div class="container">
-      <div class="row align-items-center gy-4">
+      <div class="row align-items-start gy-4">
         <div class="col-lg-7">
           <h1 class="fw-bold mb-3">Algorithms ⇢ Inversions ⇢ Products</h1>
           <p class="lead mb-3">
-            Technical leader at NASA JPL. I design algorithms for large-scale inversion and data fusion—and ship them into operational systems,
-            public data products, and end-user apps & dashboards.
+            Technical leader at NASA JPL. I design algorithms for large-scale inversion and data
+            fusion—and ship them into operational systems, public data products, and end-user apps & dashboards.
           </p>
 
           <!-- Pedigree strip -->
@@ -147,21 +156,52 @@
           </div>
         </div>
 
-        <!-- Visual -->
+        <!-- ACTIVITY (non-repetitive) -->
         <div class="col-lg-5">
-          <div class="feature-card">
-            <div class="img-frame">
-              <img class="card-img-top" loading="lazy"
-                   src="https://dummyimage.com/1200x680/e9f2fb/0d6efd.png&text=Algorithms+%E2%80%A2+Inversions+%E2%80%A2+Products"
-                   alt="Portfolio preview">
+          <div class="feature-card activity-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h2 class="h5 m-0">Activity</h2>
+              <span class="badge bg-light text-dark border">Status: Shipping TerraOorja • Updating LA Dashboard</span>
             </div>
-            <div class="card-body">
-              <div class="d-flex flex-wrap gap-2">
-                <span class="chip"><i class="bi bi-gear"></i> Algorithms & HPC</span>
-                <span class="chip"><i class="bi bi-diagram-3"></i> Bayesian/Geostatistical Inversion</span>
-                <span class="chip"><i class="bi bi-grid-1x2"></i> Apps & Dashboards</span>
-                <span class="chip"><i class="bi bi-database"></i> NASA Data Products</span>
-              </div>
+
+            <!-- Mini distribution (static for now; easy to wire to counts later) -->
+            <div class="mb-2 small text-muted">Current focus</div>
+            <div class="bar mb-2" aria-hidden="true"></div>
+            <div class="d-flex flex-wrap gap-3 small mb-3">
+              <span><i class="legend-dot lg-algo"></i>Algorithms 25%</span>
+              <span><i class="legend-dot lg-apps"></i>Apps 20%</span>
+              <span><i class="legend-dot lg-grants"></i>Grants 20%</span>
+              <span><i class="legend-dot lg-data"></i>Data 15%</span>
+              <span><i class="legend-dot lg-pubs"></i>Pubs 15%</span>
+              <span><i class="legend-dot lg-git"></i>GitHub 5%</span>
+            </div>
+
+            <!-- Icon grid (8 items; no screenshots) -->
+            <div class="icon-grid">
+              <a class="icon-item" href="/algorithms.html" title="Algorithms">
+                <i class="bi bi-cpu"></i><span>Algorithms</span>
+              </a>
+              <a class="icon-item" href="/projects.html" title="Apps & Dashboards">
+                <i class="bi bi-grid-1x2"></i><span>Apps</span>
+              </a>
+              <a class="icon-item" href="/grants.html" title="Grants / Programs">
+                <i class="bi bi-briefcase"></i><span>Grants</span>
+              </a>
+              <a class="icon-item" href="/dataproducts.html" title="Data Products">
+                <i class="bi bi-database"></i><span>Data</span>
+              </a>
+              <a class="icon-item" href="/publications.html" title="Publications">
+                <i class="bi bi-journal-text"></i><span>Pubs</span>
+              </a>
+              <a class="icon-item" href="https://github.com/learngeostat" target="_blank" rel="noopener" title="GitHub">
+                <i class="bi bi-github"></i><span>GitHub</span>
+              </a>
+              <a class="icon-item" href="/contact.html#teaching" title="Teaching (workshops & TA)">
+                <i class="bi bi-easel2"></i><span>Teaching</span>
+              </a>
+              <a class="icon-item" href="/publications.html#talks" title="Talks (conference presentations)">
+                <i class="bi bi-mic"></i><span>Talks</span>
+              </a>
             </div>
           </div>
         </div>
@@ -171,15 +211,16 @@
   </header>
 
   <main class="container pb-5">
-    <!-- Three pillars -->
-    <section class="pillars">
+
+    <!-- What I do -->
+    <section>
       <h2 class="section-title">What I do</h2>
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="card h-100">
             <div class="card-body">
               <h3 class="h5"><i class="bi bi-cpu me-2"></i>Algorithms & HPC</h3>
-              <p class="mb-2">Kronecker O(n²·⁵) methods, sparse×sparse covariance ops, and PSD kernels for large inverse problems.</p>
+              <p class="mb-2">O(n²·⁵) Kronecker methods, sparse×sparse covariance ops, and PSD kernels for large inverse problems.</p>
               <div class="mb-3">
                 <span class="chip">Kronecker</span> <span class="chip">Sparse ops</span> <span class="chip">PSD kernels</span>
               </div>
@@ -205,7 +246,9 @@
               <h3 class="h5"><i class="bi bi-grid-1x2 me-2"></i>Products & Programs</h3>
               <p class="mb-2">TerraOorja mobile app, LA Megacity dashboard, and NASA GES DISC data products; PI/Co-I on multi-agency grants.</p>
               <div class="mb-3">
-                <span class="chip"><i class="bi bi-phone"></i> App</span> <span class="chip"><i class="bi bi-bar-chart-line"></i> Dashboard</span> <span class="chip"><i class="bi bi-database"></i> DOIs</span>
+                <span class="chip"><i class="bi bi-phone"></i> App</span>
+                <span class="chip"><i class="bi bi-bar-chart-line"></i> Dashboard</span>
+                <span class="chip"><i class="bi bi-database"></i> DOIs</span>
               </div>
               <a class="btn btn-outline-primary btn-sm" href="/projects.html">See apps & dashboard</a>
             </div>
@@ -214,16 +257,14 @@
       </div>
     </section>
 
-    <!-- Featured work -->
+    <!-- Featured (PNG filenames unchanged) -->
     <section>
       <h2 class="section-title">Featured</h2>
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-6">
           <div class="card feature-card h-100">
             <div class="img-frame">
-              <img class="card-img-top" loading="lazy"
-                   src="/assets/images/la_overview.png"
-                   alt="LA Megacity Dashboard">
+              <img class="card-img-top" loading="lazy" src="/assets/images/la_overview.png" alt="LA Megacity Dashboard">
             </div>
             <div class="card-body">
               <h3 class="h5 mb-2"><i class="bi bi-bar-chart-line me-2 text-success"></i>LA Megacity GHG Dashboard</h3>
@@ -237,9 +278,7 @@
         <div class="col-lg-6">
           <div class="card feature-card h-100">
             <div class="img-frame">
-              <img class="card-img-top" loading="lazy"
-                   src="/assets/images/app_overview.png"
-                   alt="TerraOorja app">
+              <img class="card-img-top" loading="lazy" src="/assets/images/app_overview.png" alt="TerraOorja app">
             </div>
             <div class="card-body">
               <h3 class="h5 mb-2"><i class="bi bi-phone me-2 text-primary"></i>TerraOorja — Decarbonization App</h3>
@@ -299,7 +338,7 @@
       </div>
     </section>
 
-    <!-- Selected algorithms (teasers) -->
+    <!-- Selected algorithms -->
     <section>
       <h2 class="section-title">Selected Algorithms</h2>
       <div class="row g-3">
@@ -336,14 +375,14 @@
       <h2 class="section-title">Publications</h2>
       <p class="text-muted">Selected works across GMD, ERL, ACP, PNAS, Nature, and more.</p>
       <div class="d-flex flex-wrap gap-2 mb-3">
-        <span class="chip"><i class="bi bi-journal-text"></i> Peer-reviewed: 50+</span>
+        <span class="chip"><i class="bi bi-journal-text"></i> Peer-reviewed: 30+</span>
         <span class="chip"><i class="bi bi-bar-chart"></i> h-index 27 (Google Scholar)</span>
       </div>
       <a class="btn btn-outline-secondary btn-sm" href="/publications.html"><i class="bi bi-box-arrow-in-right me-1"></i>Browse publications</a>
       <a class="btn btn-outline-success btn-sm ms-2" href="https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en" target="_blank" rel="noopener"><i class="bi bi-mortarboard me-1"></i>Google Scholar</a>
     </section>
 
-    <!-- Grants / Program management teaser -->
+    <!-- Grants -->
     <section>
       <h2 class="section-title">Grants & Program Management</h2>
       <p class="text-muted">PI/Co-I on multi-agency programs spanning NASA, NIST, DOE, and NSF.</p>
@@ -368,6 +407,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer py-4">
@@ -382,14 +422,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.getElementById('y').textContent=new Date().getFullYear();
-    const p=location.pathname.replace(/\/+$/,'')||'/';
+    // year + active nav
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const p=(location.pathname.replace(/\/+$/,'')||'/');
     document.querySelectorAll('.navbar .nav-link').forEach(a=>{
       if(a.getAttribute('href')===p){a.classList.add('active');a.setAttribute('aria-current','page');}
     });
   </script>
 </body>
 </html>
+
 
 
 
