@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Approach — Vineet Yadav</title>
+  <meta name="description" content="Decision-first, explainable, production-minded: how I turn complex, multi-source data into reliable tools—ingest → model → explain → deploy. Language-agnostic, constraint-driven, with work stories, algorithms, and cross-industry applications.">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    /* Page polish */
+    .approach-hero { margin-top: .25rem; }
+    .approach-hero .lead { color:#6c757d }
+    .approach-card{border:none;border-left:4px solid var(--bs-primary);box-shadow:0 2px 14px rgba(0,0,0,.06);border-radius:.75rem}
+    .approach-icon{width:48px;height:48px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:rgba(13,110,253,.08)}
+    .approach-icon i{font-size:1.25rem;color:var(--bs-primary)}
+    .chip{background:rgba(13,110,253,.08);border:1px solid rgba(13,110,253,.2);border-radius:999px;padding:.25rem .6rem;font-size:.8rem;font-weight:600;margin-right:.35rem}
+    .section-anchor{scroll-margin-top:110px}
+    /* Tighten superscript spacing */
+    sup{font-size:0.7em;vertical-align:super;line-height:0;margin-left:-0.1em}
+  </style>
+</head>
+<body>
+  <div class="top-accent fixed-top"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-hero fixed-top" style="top:6px;">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="/"><i class="bi bi-cpu me-2"></i>Vineet Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/approach.html">Approach</a></li>
+            <li class="nav-item"><a class="nav-link" href="/projects.html">Apps & Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+            <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="/publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+    <header class="approach-hero mb-4">
+      <h1 class="section-title">How I Work</h1>
+      <p class="lead">
+        I start from the problem, not the tool. First we clarify the decision to be made and constraints (accuracy, latency, cost, explainability).
+        Then we set objectives and success metrics, write down working hypotheses (assumptions and prior beliefs), and check whether available data can really support or refute them.
+        Only then do we build—cleanly and visibly—<strong>ingest → model → explain → deploy</strong>.
+      </p>
+    </header>
+
+    <!-- Quick Jump Navigation -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <a class="btn btn-outline-primary btn-sm" href="#methodology"><i class="bi bi-compass me-1"></i>Philosophy</a>
+      <a class="btn btn-outline-primary btn-sm" href="#technical-stack"><i class="bi bi-stack me-1"></i>Tools &amp; Stack</a>
+      <a class="btn btn-outline-primary btn-sm" href="#stories"><i class="bi bi-book me-1"></i>Work Stories</a>
+      <a class="btn btn-outline-primary btn-sm" href="#applications"><i class="bi bi-diagram-3 me-1"></i>Applications</a>
+      <a class="btn btn-outline-primary btn-sm" href="#algorithms"><i class="bi bi-cpu me-1"></i>Algorithms</a>
+      <a class="btn btn-outline-primary btn-sm" href="#process"><i class="bi bi-rocket me-1"></i>Process</a>
+    </div>
+
+    <!-- Philosophy / Methodology -->
+    <section id="methodology" class="section-anchor mb-5">
+      <div class="card approach-card">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="approach-icon"><i class="bi bi-compass"></i></span>
+            <div class="flex-grow-1">
+              <h2 class="h5 mb-3">Philosophy</h2>
+              <ul class="mb-3">
+                <li><strong>Decision-first:</strong> What changes if we knew the answer? Tie models to a concrete decision and owner.</li>
+                <li><strong>Simple before clever:</strong> Earn complexity with measurable lift and clear diagnostics.</li>
+                <li><strong>Explainability by design:</strong> Assumptions and uncertainty are part of the interface, not an appendix.</li>
+                <li><strong>Production-minded:</strong> Prototype fast, ship something reliable, iterate with telemetry.</li>
+              </ul>
+              <div class="mb-2">
+                <span class="chip">Problem framing</span><span class="chip">Hypotheses &amp; data audit</span><span class="chip">Explainability</span><span class="chip">Operational focus</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools / Stack -->
+    <section id="technical-stack" class="section-anchor mb-5">
+      <div class="card approach-card">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="approach-icon"><i class="bi bi-stack"></i></span>
+            <div class="flex-grow-1">
+              <h2 class="h5 mb-3">Language-Agnostic, Constraint-Driven</h2>
+              <p class="mb-3">
+                I don’t start from a preferred stack; I start from the objective, constraints, and data. The tool follows the problem.
+                I pick the simplest thing that meets accuracy, latency, and maintainability needs—then scale up only if required.
+              </p>
+              <ul class="mb-3">
+                <li><strong>Heavy numerics / linear algebra:</strong> MATLAB for exploration; <strong>Fortran/C/C++</strong> for performance (OpenMP/MPI when parallelism matters).</li>
+                <li><strong>Statistics &amp; inference:</strong> <strong>R</strong> and its ecosystem.</li>
+                <li><strong>Wrangling &amp; orchestration &amp; Machine Learning:</strong> <strong>Python</strong> (+ when it’s a data problem).</li>
+                <li><strong>Delivery:</strong> <strong>HTML/CSS/JavaScript</strong> for web; <strong>Flutter/Dart</strong> for cross-platform mobile.</li>
+                <li><strong>Fast validation &amp; communication:</strong> sometimes <strong>Excel</strong>—and often a <strong>whiteboard</strong> first.</li>
+              </ul>
+              <div class="mb-2">
+                <span class="chip">Fortran/C/C++</span><span class="chip">Python</span><span class="chip">R</span><span class="chip">OpenMP/MPI</span><span class="chip">MATLAB</span><span class="chip">Web &amp; Flutter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Stories -->
+    <section id="stories" class="section-anchor mb-5">
+      <h2 class="h5 mb-3">Work Stories</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-memory me-2"></i>When memory locality dominated, I wrote the kernel</h3>
+              <p class="small mb-2">A “stock” sparse×sparse multiply was the bottleneck. I built a cache-friendly C kernel with triangle-only and dense-output variants, then integrated it into the pipeline. Result: cleaner memory behavior and measurable speedups—without changing the science.</p>
+              <div class="mt-2 d-flex flex-wrap gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-file-earmark-text"></i> Paper
+                </a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://gmd.copernicus.org/preprints/gmd-2016-204/gmd-2016-204-supplement.zip" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-code-slash"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-cpu me-2"></i>When 95% of runtime was linear algebra, I leaned into HPC</h3>
+              <p class="small mb-2">An inverse modeling system needed to run at continental scale. I implemented the heavy operators in Fortran with OpenMP/MPI and kept the workflow in Python. Result: stable runtimes at scale, and a model colleagues could use without thinking about cores or nodes.</p>
+              <div class="mt-2 d-flex flex-wrap gap-2">
+                <a class="btn btn-sm btn-outline-dark" href="https://github.com/learngeostat/Atmospheric-Inverse-Modeling" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-diagram-3 me-2"></i>When structure beat brute force, I used it</h3>
+              <p class="small mb-2">Instead of treating a huge covariance as a monolith, I exploited <strong>Kronecker structure</strong> and reduced key multiplies from O(n³) to <strong>O(n<sup>2.5</sup>)</strong>. I also computed <strong>aggregated posterior uncertainty</strong> directly, avoiding full posteriors. The same idea has been adopted by external teams.</p>
+              <div class="mt-2 d-flex flex-wrap gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://gmd.copernicus.org/articles/6/583/2013/gmd-6-583-2013.html" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-file-earmark-text"></i> Paper
+                </a>
+                <a class="btn btn-sm btn-outline-success" href="https://gml.noaa.gov/ccgg/carbontracker-lagrange/doc/intro.html" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-link-45deg"></i> NOAA CT-Lagrange
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-diagram-2 me-2"></i>When model selection exploded, I cut the search space</h3>
+              <p class="small mb-2">I built a <strong>backward-elimination + branch-and-bound</strong> algorithm for spatio-temporal regression. It finds optimal/near-optimal covariate sets quickly—even with autocorrelated residuals—so we spend time on interpretation, not brute force.</p>
+              <div class="mt-2 d-flex flex-wrap gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://www.sciencedirect.com/science/article/abs/pii/S1364815212003155" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
+                  <i class="bi bi-file-earmark-text"></i> Paper
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-eyeglasses me-2"></i>When results needed to be auditable, I made them legible</h3>
+              <p class="small mb-2">I introduced plain-English diagnostics: overlap/dominance maps to see which observations uniquely inform estimates; local sensitivity scores to rank drivers; a sampling-free global sensitivity to attribute uncertainty; and a forward-operator–driven way to model <strong>nonstationary error correlations</strong>. Net effect: faster iteration and trusted decisions.</p>
+              <div class="mt-2 d-flex flex-wrap gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://gmd.copernicus.org/articles/16/5219/2023/" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-file-earmark-text"></i> Paper
+                </a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://gmd.copernicus.org/articles/16/5219/2023/gmd-16-5219-2023-supplement.zip" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-code-slash"></i> Supplement / Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Applications -->
+    <section id="applications" class="section-anchor mb-5">
+      <div class="card approach-card">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="approach-icon"><i class="bi bi-diagram-3"></i></span>
+            <div class="flex-grow-1">
+              <h2 class="h5 mb-3">Applications (Beyond the Original Domain)</h2>
+              <ul class="mb-3">
+                <li><strong>Finance &amp; risk:</strong> scenario testing, sensitivity/attribution, explainable forecasts.</li>
+                <li><strong>Operations &amp; logistics:</strong> demand shaping, inventory positioning, network design.</li>
+                <li><strong>Energy &amp; planning:</strong> adoption modeling, cost/benefit under policy and incentives.</li>
+                <li><strong>Public sector &amp; policy:</strong> transparent metrics, uncertainty, and “what-if” analysis.</li>
+              </ul>
+              <p class="mb-0">I’ve used the same toolkit to build consumer-facing tools too—for example, a mobile app that turns agent-based adoption models and cost curves into an interactive, map-centric experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Algorithms -->
+    <section id="algorithms" class="section-anchor mb-5">
+      <h2 class="h5 mb-3">Algorithms &amp; Building Blocks</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-diagram-3 me-2"></i>Kronecker-Structured Operators</h3>
+              <p class="small mb-0"><strong>O(n<sup>2.5</sup>)</strong> multiplies for large inverse problems; direct computation of <strong>aggregated posterior uncertainty</strong> without forming full posteriors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-braces-asterisk me-2"></i>Sparse×Sparse Kernels</h3>
+              <p class="small mb-0">Cache-friendly custom multiplication when memory locality is the constraint, including triangle-only and dense-output variants for pipeline needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-funnel me-2"></i>Model Selection at Scale</h3>
+              <p class="small mb-0">Backward-elimination + branch-and-bound for spatio-temporal regression; optimal/near-optimal sets without exhaustive search, even with correlated residuals.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-2"><i class="bi bi-graph-up-arrow me-2"></i>Sensitivity &amp; Diagnostics</h3>
+              <p class="small mb-0">Closed-form local sensitivities; sampling-free global sensitivity via Taylor expansion; overlap/dominance metrics to assess observability; forward-operator–driven nonstationary error models.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section-anchor mb-5">
+      <div class="card approach-card">
+        <div class="card-body">
+          <div class="d-flex align-items-start gap-3">
+            <span class="approach-icon"><i class="bi bi-rocket"></i></span>
+            <div class="flex-grow-1">
+              <h2 class="h5 mb-3">How an Engagement Works</h2>
+              <ol class="mb-3">
+                <li><strong>Scope (1–2 weeks):</strong> clarify decisions, success metrics, constraints; audit data &amp; hypotheses; set baselines and a complexity budget.</li>
+                <li><strong>Build (iterative):</strong> ingest → model → explain → deploy, with benchmarks and diagnostics every step.</li>
+                <li><strong>Deliver:</strong> an operational tool (app, API, dashboard) plus the playbook—docs, metrics, and hand-off materials so teams can run without me.</li>
+              </ol>
+              <div class="mb-2">
+                <span class="chip">Decision-first</span><span class="chip">Diagnostics &amp; UQ</span><span class="chip">Benchmarks</span><span class="chip">Operational delivery</span>
+              </div>
+              <a class="btn btn-primary btn-sm mt-2" href="/contact.html"><i class="bi bi-envelope me-1"></i>Discuss your project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex justify-content-between">
+      <small class="text-muted">&copy; <span id="y"></span> Vineet Yadav</small>
+      <div class="d-flex gap-3">
+        <a class="link-secondary" href="/VineetYadav_CV.pdf">CV (PDF)</a>
+        <a class="link-secondary" href="mailto:yadavvineet@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // year + active nav
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const p=(location.pathname.replace(/\/+$/,'')||'/');
+    document.querySelectorAll('.navbar .nav-link').forEach(a=>{
+      if(a.getAttribute('href')===p){a.classList.add('active');a.setAttribute('aria-current','page');}
+    });
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications — Vineet Yadav</title>
+  <title>Selected Publications — Vineet Yadav</title>
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
@@ -16,12 +16,13 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
       <div id="navMain" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
-          <li class="nav-item"><a class="nav-link" href="/projects.html">Apps &amp; Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
-          <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/publications.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/approach.html">Approach</a></li>
+            <li class="nav-item"><a class="nav-link" href="/projects.html">Apps & Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="/algorithms.html">Algorithms</a></li>
+            <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="/grants.html">Grants</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
         </ul>
         <a class="btn btn-outline-light btn-sm" href="/VineetYadav_CV.pdf">CV</a>
       </div>
@@ -29,24 +30,17 @@
   </nav>
 
   <main class="container pb-5">
-    <h1 class="section-title">Publications</h1>
-    <p class="text-muted mb-3">Organized by contribution focus. Use the search or quick filters to find a paper fast.</p>
-
-    <!-- Quick tools -->
-    <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
-      <div class="input-group" style="max-width:520px;">
-        <span class="input-group-text"><i class="bi bi-search"></i></span>
-        <input id="pubSearch" type="search" class="form-control" placeholder="Search title, journal, year…">
-      </div>
-      <div class="ms-auto d-flex flex-wrap gap-2">
-        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="all">All</button>
-        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="oa">Open Access</button>
-        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="2025">2025</button>
-        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="2024">2024</button>
-        <button class="btn btn-outline-primary btn-sm filter-btn" data-filter="2023">2023</button>
-        <button class="btn btn-outline-secondary btn-sm" id="clearFilters">Clear</button>
-      </div>
+    <!-- Links to complete list and BibTeX -->
+    <div class="mb-4 d-flex flex-wrap gap-2">
+      <a class="btn btn-outline-secondary btn-sm" href="https://scholar.google.com/citations?user=YgrkeIMAAAAJ&hl=en" target="_blank" rel="noopener">
+        <i class="bi bi-journal-text me-1"></i>Complete List (Google Scholar)
+      </a>
+      <a class="btn btn-outline-secondary btn-sm" href="/publications.bib">
+        <i class="bi bi-filetype-bib me-1"></i>BibTeX
+      </a>
     </div>
+
+    <h1 class="section-title">Selected Publications</h1>
 
     <!-- ===== Algorithm-Focused ===== -->
     <div class="card mb-4" id="algorithms">
@@ -240,7 +234,7 @@
           <!-- Nature 2019 super-emitters (California) -->
           <div class="list-group-item px-0 pub" data-year="2019" data-tags="science methane california">
             <div class="d-flex w-100 justify-content-between">
-              <h6 class="mb-1">California’s methane super-emitters</h6>
+              <h6 class="mb-1">California's methane super-emitters</h6>
               <small class="text-muted">Nature, 2019</small>
             </div>
             <p class="mb-1 small">Identification/attribution of largest point sources in California.</p>
@@ -318,23 +312,7 @@
           </div>
 
         </div>
-
-        <!-- Show more pattern if you want to append long back-catalog later -->
-        <!-- <div class="text-center mt-3"><button class="btn btn-outline-info btn-sm" id="showMore">Show more</button></div> -->
       </div>
-    </div>
-
-    <!-- Footer links -->
-    <div class="mt-4 d-flex flex-wrap gap-2">
-      <a class="btn btn-outline-secondary btn-sm" href="https://scholar.google.com/" target="_blank" rel="noopener">
-        <i class="bi bi-journal-text me-1"></i>Complete list (Google Scholar)
-      </a>
-      <a class="btn btn-outline-secondary btn-sm" href="/publications.bib">
-        <i class="bi bi-filetype-bib me-1"></i>BibTeX
-      </a>
-      <a class="btn btn-outline-secondary btn-sm" href="/VineetYadav_CV.pdf">
-        <i class="bi bi-download me-1"></i>Full CV
-      </a>
     </div>
   </main>
 
@@ -347,36 +325,6 @@
     // year in footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // search + filter
-    const items = [...document.querySelectorAll('.pub')];
-    const q = document.getElementById('pubSearch');
-    const btns = document.querySelectorAll('.filter-btn');
-    const clearBtn = document.getElementById('clearFilters');
-    let activeFilter = 'all';
-
-    function applyFilters(){
-      const term = (q.value || '').toLowerCase().trim();
-      items.forEach(el => {
-        const hay = (el.textContent || '').toLowerCase();
-        const year = el.getAttribute('data-year');
-        const tags = (el.getAttribute('data-tags') || '');
-        const badge = (el.getAttribute('data-badge') || '');
-        const passText = !term || hay.includes(term);
-        const passFilter =
-          activeFilter === 'all' ||
-          year === activeFilter ||
-          (activeFilter === 'oa' && badge === 'oa');
-        el.style.display = (passText && passFilter) ? '' : 'none';
-      });
-    }
-    q.addEventListener('input', applyFilters);
-    btns.forEach(b => b.addEventListener('click', () => {
-      activeFilter = b.dataset.filter;
-      btns.forEach(x => x.classList.toggle('active', x===b));
-      applyFilters();
-    }));
-    clearBtn.addEventListener('click', () => { q.value=''; activeFilter='all'; btns.forEach(x=>x.classList.remove('active')); applyFilters(); });
-
     // mark current nav
     const p = location.pathname.replace(/\/+$/,'')||'/';
     document.querySelectorAll('.navbar .nav-link').forEach(a=>{
@@ -388,5 +336,3 @@
   </script>
 </body>
 </html>
-
-
