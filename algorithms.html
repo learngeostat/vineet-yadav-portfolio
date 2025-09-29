@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Algorithms & Frameworks — Vineet Yadav</title>
 
   <!-- Theme & Icons -->
@@ -19,6 +20,38 @@
     .section-anchor{scroll-margin-top:110px}
     .mini-link{font-size:.85rem}
     sup{font-size:0.7em;vertical-align:super;line-height:0;margin-left:-0.1em}
+    
+    /* Video container styles */
+    .video-container{
+      border-radius:.5rem;
+      overflow:hidden;
+      box-shadow:0 2px 14px rgba(0,0,0,.08);
+      border:1px solid #dee2e6;
+      transition:all 0.3s ease;
+      position: relative;
+    }
+    .video-container.expanded{
+      transform:scale(1.1);
+      box-shadow:0 4px 20px rgba(0,0,0,.15);
+      z-index:10;
+      position:relative;
+    }
+    .video-embed{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .video-controls{
+      padding:0.75rem;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(10px);
+    }
+    .video-controls .btn-group{
+      width:100%;
+    }
+    .video-controls .btn{
+      flex:1;
+    }
   </style>
 </head>
 <body>
@@ -29,7 +62,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
       <div id="navMain" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link" href="/approach.html">Approach</a></li>
+          <li class="nav-item"><a class="nav-link" href="/approach.html">How I Work</a></li>
           <li class="nav-item"><a class="nav-link" href="/projects.html">Apps & Dashboard</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="/algorithms.html">Algorithms</a></li>
           <li class="nav-item"><a class="nav-link" href="/dataproducts.html">Data Products</a></li>
@@ -62,25 +95,53 @@
     <section id="linear-algebra" class="section-anchor">
       <div class="card algo-card mb-4">
         <div class="card-body">
-          <div class="d-flex align-items-start gap-3">
-            <span class="algo-icon"><i class="bi bi-cpu"></i></span>
-            <div class="flex-grow-1">
-              <div class="d-flex justify-content-between align-items-start">
-                <h3 class="h5 mb-1">O(n<sup>2.5</sup>) Kronecker Methods for Large Inverse Problems</h3>
-                <span class="text-muted small">Proven at continental scale</span>
+          <div class="row">
+            <!-- Main content column -->
+            <div class="col-md-8">
+              <div class="d-flex align-items-start gap-3">
+                <span class="algo-icon"><i class="bi bi-cpu"></i></span>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="h5 mb-1">O(n<sup>2.5</sup>) Kronecker Methods for Matrix Multiplication</h3>
+                    <span class="text-muted small">Proven at large spatio-temporal scales</span>
+                  </div>
+                  <p class="mb-2">
+                    Cuts dominant multiplies by exploiting Kronecker structure of matrices, enabling
+                    materially faster matrix multiplication. Deployed in flux inversions.
+                  </p>
+                  <p class="text-muted small mb-3">
+                    A step-by-step visualization of the indirect matrix multiplication algorithm enabled by the Kronecker product structure.
+                  </p>
+                  <div class="mb-2">
+                    <span class="chip">Kronecker products</span><span class="chip">UQ</span><span class="chip">Scaling</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 align-items-center">
+                    <a class="btn btn-outline-primary btn-sm" href="https://gmd.copernicus.org/articles/6/583/2013/gmd-6-583-2013.html" target="_blank" rel="noopener">
+                      <i class="bi bi-link-45deg me-1"></i>Paper
+                    </a>
+                    <a class="mini-link" href="/publications.html#algorithms">See citation</a>
+                  </div>
+                </div>
               </div>
-              <p class="mb-2">
-                Cuts dominant multiplies by exploiting Kronecker structure in state/observation operators, enabling
-                materially larger state vectors and faster UQ on commodity hardware. Deployed in carbon flux inversions.
-              </p>
-              <div class="mb-2">
-                <span class="chip">Kronecker products</span><span class="chip">UQ</span><span class="chip">Scaling</span>
-              </div>
-              <div class="d-flex flex-wrap gap-2 align-items-center">
-                <a class="btn btn-outline-primary btn-sm" href="https://gmd.copernicus.org/articles/6/583/2013/gmd-6-583-2013.html" target="_blank" rel="noopener">
-                  <i class="bi bi-link-45deg me-1"></i>Paper
-                </a>
-                <a class="mini-link" href="/publications.html#algorithms">See citation</a>
+            </div>
+            
+            <!-- Video column -->
+            <div class="col-md-4">
+              <div class="video-container" id="kronecker-video">
+                <video class="video-embed" controls poster="/assets/images/kronecker_abstract_poster.png" preload="metadata">
+                  <source src="/assets/videos/MatrixVisualization_1440p.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-outline-primary btn-sm" onclick="toggleVideoSize('kronecker-video')">
+                      <i class="bi bi-arrows-angle-expand me-1"></i><span class="expand-text">Expand</span>
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#kronVideoModal">
+                      <i class="bi bi-fullscreen me-1"></i>Full Screen
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -92,25 +153,50 @@
     <section id="sparse" class="section-anchor">
       <div class="card algo-card mb-4">
         <div class="card-body">
-          <div class="d-flex align-items-start gap-3">
-            <span class="algo-icon"><i class="bi bi-node-plus"></i></span>
-            <div class="flex-grow-1">
-              <div class="d-flex justify-content-between align-items-start">
-                <h3 class="h5 mb-1">Sparse×Sparse Covariance Multiplication for Inversions</h3>
-                <span class="text-muted small">Memory-aware, parallel</span>
+          <div class="row">
+            <!-- Main content column -->
+            <div class="col-md-8">
+              <div class="d-flex align-items-start gap-3">
+                <span class="algo-icon"><i class="bi bi-node-plus"></i></span>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="h5 mb-1">Sparse×Sparse Covariance Multiplication for Inversions</h3>
+                    <span class="text-muted small">Memory-aware, parallel</span>
+                  </div>
+                  <p class="mb-2">
+                    Cache-friendly kernels for covariance/Jacobian patterns (e.g., HQH<sup>T</sup>), with triangle-only and dense-target
+                    variants. Improves throughput in production pipelines for inverse problems.
+                  </p>
+                  <div class="mb-2">
+                    <span class="chip">OpenMP</span><span class="chip">Covariance ops</span><span class="chip">Throughput</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 align-items-center">
+                    <a class="btn btn-outline-primary btn-sm" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener">
+                      <i class="bi bi-link-45deg me-1"></i>Preprint
+                    </a>
+                    <a class="mini-link" href="/publications.html#algorithms">See citation</a>
+                  </div>
+                </div>
               </div>
-              <p class="mb-2">
-                Cache-friendly kernels for covariance/Jacobian patterns (e.g., HQHᵀ), with triangle-only and dense-target
-                variants. Improves throughput in production pipelines for trace-gas estimation.
-              </p>
-              <div class="mb-2">
-                <span class="chip">OpenMP</span><span class="chip">Covariance ops</span><span class="chip">Throughput</span>
-              </div>
-              <div class="d-flex flex-wrap gap-2 align-items-center">
-                <a class="btn btn-outline-primary btn-sm" href="https://gmd.copernicus.org/preprints/gmd-2016-204/" target="_blank" rel="noopener">
-                  <i class="bi bi-link-45deg me-1"></i>Preprint
-                </a>
-                <a class="mini-link" href="/publications.html#algorithms">See citation</a>
+            </div>
+            
+            <!-- Video column -->
+            <div class="col-md-4">
+              <div class="video-container" id="sparse-video">
+                <video class="video-embed" controls poster="/assets/images/sparse_explainer.png" preload="metadata">
+                  <source src="/assets/videos/SparseExplainer_1440p.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-outline-primary btn-sm" onclick="toggleVideoSize('sparse-video')">
+                      <i class="bi bi-arrows-angle-expand me-1"></i><span class="expand-text">Expand</span>
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#sparseVideoModal">
+                      <i class="bi bi-fullscreen me-1"></i>Full Screen
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -118,7 +204,64 @@
       </div>
     </section>
 
-    <!-- 3) Geostatistics -->
+    <!-- 3) Model Selection -->
+    <section id="model-selection" class="section-anchor">
+      <div class="card algo-card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <!-- Main content column -->
+            <div class="col-md-8">
+              <div class="d-flex align-items-start gap-3">
+                <span class="algo-icon"><i class="bi bi-search"></i></span>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="h5 mb-1">Backward Elimination Discrete Optimization for Model Selection</h3>
+                    <span class="text-muted small">Spatio-temporal regression</span>
+                  </div>
+                  <p class="mb-2">
+                    Branch-and-bound algorithm for optimal covariate selection in spatio-temporal regression models. Uses backward elimination with discrete optimization to efficiently identify the best subset of predictors while accounting for spatial/temporal correlations.
+                  </p>
+                  <p class="text-muted small mb-3">
+                    Computational framework that dramatically reduces model comparison overhead through intelligent branching and pruning strategies.
+                  </p>
+                  <div class="mb-2">
+                    <span class="chip">Model selection</span><span class="chip">Branch and bound</span><span class="chip">Discrete optimization</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 align-items-center">
+                    <a class="btn btn-outline-primary btn-sm" href="https://www.sciencedirect.com/science/article/pii/S1364815212003045" target="_blank" rel="noopener">
+                      <i class="bi bi-link-45deg me-1"></i>Paper
+                    </a>
+                    <a class="mini-link" href="/publications.html#algorithms">See citation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Video column -->
+            <div class="col-md-4">
+              <div class="video-container" id="model-selection-video">
+                <video class="video-embed" controls poster="/assets/images/backward_elimination.png" preload="metadata">
+                  <source src="/assets/videos/IterativeCovariance_1440p.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-outline-primary btn-sm" onclick="toggleVideoSize('model-selection-video')">
+                      <i class="bi bi-arrows-angle-expand me-1"></i><span class="expand-text">Expand</span>
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modelSelectionVideoModal">
+                      <i class="bi bi-fullscreen me-1"></i>Full Screen
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) Geostatistics -->
     <section id="geostat" class="section-anchor">
       <div class="card algo-card mb-4">
         <div class="card-body">
@@ -148,7 +291,7 @@
       </div>
     </section>
 
-    <!-- 4) Agent-Based (ABM) -->
+    <!-- 5) Agent-Based (ABM) -->
     <section id="abm" class="section-anchor">
       <div class="card algo-card mb-4">
         <div class="card-body">
@@ -178,7 +321,7 @@
       </div>
     </section>
 
-    <!-- 5) Bayesian Inversions -->
+    <!-- 6) Bayesian Inversions -->
     <section id="bayes" class="section-anchor">
       <div class="card algo-card mb-4">
         <div class="card-body">
@@ -220,15 +363,70 @@
     </div>
   </footer>
 
+  <!-- Video modals -->
+  <div class="modal fade" id="kronVideoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <video controls autoplay class="w-100" poster="/assets/images/kronecker_abstract_poster.png">
+            <source src="/assets/videos/MatrixVisualization_1440p.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sparse Video Modal -->
+  <div class="modal fade" id="sparseVideoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <video controls autoplay class="w-100" poster="/assets/images/sparse_explainer.png">
+            <source src="/assets/videos/SparseExplainer_1440p.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Model Selection Video Modal -->
+  <div class="modal fade" id="modelSelectionVideoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <video controls autoplay class="w-100" poster="/assets/images/backward_elimination.png">
+            <source src="/assets/videos/IterativeCovariance_1440p.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // year + active nav
+    // Year + active nav
     document.getElementById('y').textContent = new Date().getFullYear();
     const p=(location.pathname.replace(/\/+$/,'')||'/');
     document.querySelectorAll('.navbar .nav-link').forEach(a=>{
       if(a.getAttribute('href')===p){a.classList.add('active');a.setAttribute('aria-current','page');}
     });
+
+    // Video size toggle functionality
+    function toggleVideoSize(videoId) {
+      const container = document.getElementById(videoId);
+      const expandText = container.querySelector('.expand-text');
+      const expandIcon = container.querySelector('.bi-arrows-angle-expand, .bi-arrows-angle-contract');
+      
+      if (container.classList.contains('expanded')) {
+        container.classList.remove('expanded');
+        expandText.textContent = 'Expand';
+        expandIcon.className = 'bi bi-arrows-angle-expand me-1';
+      } else {
+        container.classList.add('expanded');
+        expandText.textContent = 'Contract';
+        expandIcon.className = 'bi bi-arrows-angle-contract me-1';
+      }
+    }
   </script>
 </body>
 </html>
-
